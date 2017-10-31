@@ -23,7 +23,7 @@
                     <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
                     <li><a class="page-scroll" href="#pricing">Pricing</a></li>
                     <li><a class="page-scroll" href="#contact">Contact</a></li>
-                    <li><a class="page-scroll login" href="#">Login</a></li>
+                    <li><a class="page-scroll login" href="{{route('login')}}">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -38,14 +38,10 @@
         <div class="item active">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>We craft<br/>
-                        brands, web apps,<br/>
-                        and user interfaces<br/>
-                        we are IN+ studio</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                    <h1>Diagnosis Disease</h1>
+                    <p>Determining potential disease through physical and mental symptoms</p>
                     <p>
-                        <a class="btn btn-lg btn-primary" href="#" role="button">READ MORE</a>
-                        <a class="caption-link" href="#" role="button">Inspinia Theme</a>
+                        <a class="btn btn-lg btn-primary" href="#" role="button">Diagnosis</a>
                     </p>
                 </div>
                 <div class="carousel-image wow zoomIn">
@@ -59,9 +55,9 @@
         <div class="item">
             <div class="container">
                 <div class="carousel-caption blank">
-                    <h1>We create meaningful <br/> interfaces that inspire.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <h1>Doctor Directory</h1>
+                    <p>All important information including specialty, address, patient visit time and phone number of renowned doctors.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Find Doctor</a></p>
                 </div>
             </div>
             <!-- Set background for slide in css -->
