@@ -20,6 +20,9 @@ Route::get('login', ['as' =>'login', 'uses' => 'CustomerController@getMyLogin'])
 Route::get('register', ['as' =>'register', 'uses' => 'CustomerController@getMyRegister']);
 
 
+Route::get('diagnosis', ['as' =>'diagnosis', 'uses' => 'FrontController@getMyDiagnosis']);
+Route::get('finddoctor', ['as' =>'finddoctor', 'uses' => 'CustomerController@getMyLogin']);
+
 // Route::prefix('report')->group(function () {
 //   Route::get('pdf', ['as' =>'pdf', 'uses' => 'ReportGenerateController@getMyReport']);
 //   Route::get('alluser', ['as' =>'alluser', 'uses' => 'ReportGenerateController@viewAllUser']);

@@ -21,7 +21,6 @@
                     <li><a class="page-scroll" href="#features">Features</a></li>
                     <li><a class="page-scroll" href="#team">Team</a></li>
                     <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
-                    <li><a class="page-scroll" href="#pricing">Pricing</a></li>
                     <li><a class="page-scroll" href="#contact">Contact</a></li>
                     <li><a class="page-scroll login" href="{{route('login')}}">Login</a></li>
                 </ul>
@@ -37,15 +36,19 @@
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <div class="container">
-                <div class="carousel-caption">
-                    <h1>Diagnosis Disease</h1>
-                    <p>Determining potential disease through physical and mental symptoms</p>
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="#" role="button">Diagnosis</a>
-                    </p>
-                </div>
-                <div class="carousel-image wow zoomIn">
-                    <img src="{{asset('front/img/landing/laptop.png')}}" alt="laptop"/>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="carousel-caption blank">
+                        <h1>Diagnosis Disease</h1>
+                        <p>Determining potential disease through physical and mental symptoms</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="{{route('diagnosis')}}" role="button">Diagnosis</a>
+                        </p>
+                    </div>
+                    <!-- <div class="carousel-image wow zoomIn">
+                        <img src="{{asset('front/img/landing/laptop.png')}}" alt="laptop"/>
+                    </div> -->
+                  </div>
                 </div>
             </div>
             <!-- Set background for slide in css -->
@@ -57,7 +60,7 @@
                 <div class="carousel-caption blank">
                     <h1>Doctor Directory</h1>
                     <p>All important information including specialty, address, patient visit time and phone number of renowned doctors.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Find Doctor</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="{{('finddoctor')}}" role="button">Find Doctor</a></p>
                 </div>
             </div>
             <!-- Set background for slide in css -->
@@ -170,14 +173,14 @@
             <div class="col-sm-4 wow fadeInLeft">
                 <div class="team-member">
                     <img src="{{asset('front/img/landing/avatar3.jpg')}}" class="img-responsive img-circle img-small" alt="">
-                    <h4><span class="navy">Amelia</span> Smith</h4>
+                    <h4><span class="navy">Ponkaj Deb</span> Nath</h4>
                     <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus. </p>
                     <ul class="list-inline social-icon">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        <li><a href="#"><i class="fa fa-github" target="_blank"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a href="https://www.facebook.com/ponkaj.nath.69" target="_blank"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="#"><i class="fa fa-linkedin" target="_blank"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -185,14 +188,14 @@
             <div class="col-sm-4">
                 <div class="team-member wow zoomIn">
                     <img src="{{asset('front/img/landing/avatar1.jpg')}}" class="img-responsive img-circle" alt="">
-                    <h4><span class="navy">John</span> Novak</h4>
+                    <h4><span class="navy">Shafikur</span> Rahman</h4>
                     <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
                     <ul class="list-inline social-icon">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        <li><a href="#"><i class="fa fa-github" target="_blank"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a href="https://www.facebook.com/shafikshaon" target="_blank"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="#"><i class="fa fa-linkedin" target="_blank"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -200,14 +203,14 @@
             <div class="col-sm-4 wow fadeInRight">
                 <div class="team-member">
                     <img src="{{asset('front/img/landing/avatar2.jpg')}}" class="img-responsive img-circle img-small" alt="">
-                    <h4><span class="navy">Peter</span> Johnson</h4>
+                    <h4><span class="navy">Sadia</span> Sabnaj</h4>
                     <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
                     <ul class="list-inline social-icon">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        <li><a href="#"><i class="fa fa-github" target="_blank"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a href="https://www.facebook.com/sadiasabnaj" target="_blank"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="#"><i class="fa fa-linkedin" target="_blank"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -251,66 +254,7 @@
 
 </section>
 
-<section class="timeline gray-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>Our workflow</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-            </div>
-        </div>
-        <div class="row features-block">
 
-            <div class="col-lg-12">
-                <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg">
-                            <i class="fa fa-briefcase"></i>
-                        </div>
-
-                        <div class="vertical-timeline-content">
-                            <h2>Meeting</h2>
-                            <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products. Below please find the current status of the sale.
-                            </p>
-                            <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                            <span class="vertical-date"> Today <br/> <small>Dec 24</small> </span>
-                        </div>
-                    </div>
-
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg">
-                            <i class="fa fa-file-text"></i>
-                        </div>
-
-                        <div class="vertical-timeline-content">
-                            <h2>Decision</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                            <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                            <span class="vertical-date"> Tomorrow <br/> <small>Dec 26</small> </span>
-                        </div>
-                    </div>
-
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg">
-                            <i class="fa fa-cogs"></i>
-                        </div>
-
-                        <div class="vertical-timeline-content">
-                            <h2>Implementation</h2>
-                            <p>Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
-                            <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                            <span class="vertical-date"> Monday <br/> <small>Jan 02</small> </span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</section>
 
 <section id="testimonials" class="navy-section testimonials" style="margin-top: 0">
 
@@ -441,123 +385,6 @@
     </div>
 
 </section>
-<section id="pricing" class="pricing">
-    <div class="container">
-        <div class="row m-b-lg">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>App Pricing</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 wow zoomIn">
-                <ul class="pricing-plan list-unstyled">
-                    <li class="pricing-title">
-                        Basic
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$16</span> / month
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li>
-                        <a class="btn btn-primary btn-xs" href="#">Signup</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-4 wow zoomIn">
-                <ul class="pricing-plan list-unstyled selected">
-                    <li class="pricing-title">
-                        Standard
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$22</span> / month
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li>
-                        <strong>Support platform</strong>
-                    </li>
-                    <li class="plan-action">
-                        <a class="btn btn-primary btn-xs" href="#">Signup</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-4 wow zoomIn">
-                <ul class="pricing-plan list-unstyled">
-                    <li class="pricing-title">
-                        Premium
-                    </li>
-                    <li class="pricing-desc">
-                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                    </li>
-                    <li class="pricing-price">
-                        <span>$160</span> / month
-                    </li>
-                    <li>
-                        Dashboards
-                    </li>
-                    <li>
-                        Projects view
-                    </li>
-                    <li>
-                        Contacts
-                    </li>
-                    <li>
-                        Calendar
-                    </li>
-                    <li>
-                        AngularJs
-                    </li>
-                    <li>
-                        <a class="btn btn-primary btn-xs" href="#">Signup</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row m-t-lg">
-            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg">
-                <p>*Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <span class="navy">Various versions</span>  have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-            </div>
-        </div>
-    </div>
-
-</section>
 
 <section id="contact" class="gray-section contact">
     <div class="container">
@@ -571,10 +398,9 @@
         <div class="row m-b-lg">
             <div class="col-lg-3 col-lg-offset-3">
                 <address>
-                    <strong><span class="navy">Company name, Inc.</span></strong><br/>
+                    <strong><span class="navy">Health Lab, Inc.</span></strong><br/>
                     795 Folsom Ave, Suite 600<br/>
-                    San Francisco, CA 94107<br/>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                    Dhaka, Bangladesh - 1209<br/>
                 </address>
             </div>
             <div class="col-lg-4">
@@ -601,7 +427,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p><strong>&copy; 2015 Company Name</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                <p><strong>&copy; 2017 Health Lab</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
             </div>
         </div>
     </div>
