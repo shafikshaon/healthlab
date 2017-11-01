@@ -30,3 +30,29 @@ Route::get('finddoctor', ['as' =>'finddoctor', 'uses' => 'CustomerController@get
 //   Route::get('download/{id}', ['as' =>'download', 'uses' => 'ReportGenerateController@downloadSingleUserInfoPDF']);
 //   Route::get('download', ['as' =>'download', 'uses' => 'ReportGenerateController@downloadAllUserInfoPDF']);
 // });
+
+Route::get('admin', ['as' =>'admin', 'uses' => 'DashboardController@getMyDashboard']);
+Route::get('dashboard', ['as' =>'dashboard', 'uses' => 'DashboardController@getMyDashboard']);
+
+Route::prefix('report')->group(function () {
+  Route::get('pdf', ['as' =>'pdf', 'uses' => 'ReportGenerateController@getMyReport']);
+  Route::get('alluser', ['as' =>'alluser', 'uses' => 'ReportGenerateController@viewAllUser']);
+  Route::get('details/{id}', ['as' =>'details', 'uses' => 'ReportGenerateController@viewDetails']);
+  Route::get('download/{id}', ['as' =>'download', 'uses' => 'ReportGenerateController@downloadSingleUserInfoPDF']);
+  Route::get('download', ['as' =>'download', 'uses' => 'ReportGenerateController@downloadAllUserInfoPDF']);
+});
+
+Route::prefix('user')->group(function () {
+  Route::get('add', ['as' =>'add', 'uses' => 'UserCrudController@addUser']);
+  Route::post('insert', ['as' =>'insert', 'uses' => 'UserCrudController@insertUser']);
+  Route::get('viewall', ['as' =>'viewall', 'uses' => 'UserCrudController@viewAllUser']);
+});
+
+Route::prefix('payment')->group(function () {
+  Route::get('add', ['as' =>'add', 'uses' => 'ProductCrudController@addProduct']);
+  Route::post('insert', ['as' =>'insert', 'uses' => 'ProductCrudController@insertProduct']);
+  Route::get('viewall', ['as' =>'viewall', 'uses' => 'ProductCrudController@viewAllProduct']);
+
+  Route::get('buyproduct/{id}', ['as' =>'buyproduct', 'uses' => 'PaypalPaymentController@buyProduct']);
+  Route::get('paywithpaypal/{id}', ['as' =>'paywithpaypal', 'uses' => 'PaypalPaymentController@payWithPaypal']);
+});
