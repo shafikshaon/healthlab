@@ -9,6 +9,12 @@
 <script src="{{asset('front/js/plugins/pace/pace.min.js')}}"></script>
 <script src="{{asset('front/js/plugins/wow/wow.min.js')}}"></script>
 
+<!-- iCheck -->
+<script src="{{asset('front/js/plugins/iCheck/icheck.min.js')}}"></script>
+
+<!-- Data picker -->
+<script src="{{asset('front/js/plugins/datapicker/bootstrap-datepicker.js')}}"></script>
+
 
 <script>
 
@@ -27,6 +33,19 @@
             }, 500);
             event.preventDefault();
             $("#navbar").collapse('hide');
+        });
+
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+
+        $('#data_1 .input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
         });
     });
 
@@ -59,6 +78,8 @@
         init();
 
     })();
+
+
 
     // Activate WOW.js plugin for animation on scrol
     new WOW().init();

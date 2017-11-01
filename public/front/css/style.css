@@ -4690,7 +4690,7 @@ body.mini-navbar.fixed-sidebar .logo-element {
   max-width: 400px;
   z-index: 100;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 90px;
 }
 .lockscreen.middle-box {
   width: 200px;
@@ -4713,7 +4713,7 @@ body.mini-navbar.fixed-sidebar .logo-element {
   color: #e6e6e6;
   font-size: 180px;
   font-weight: 800;
-  letter-spacing: -10px;
+  letter-spacing: -18px;
   margin-bottom: 0;
 }
 .middle-box h1 {
@@ -6876,7 +6876,7 @@ body.landing-page {
 }
 .landing-page h1 {
   margin-top: 10px;
-  font-size: 30px;
+  font-size: 70px;
   font-weight: 200;
 }
 .landing-page .navy-line {
@@ -6902,7 +6902,7 @@ body.landing-page {
 }
 .landing-page .navbar-default.navbar-scroll {
   background-color: #fff;
-  border-color: #fff;
+  border-bottom: 1px solid #e7eaec;
   padding: 15px 0;
 }
 .landing-page .navbar-default {
@@ -7001,7 +7001,7 @@ body.landing-page {
   border-top: 6px solid #1ab394;
 }
 .landing-page .navbar-fixed-top {
-  border: none !important;
+  border-bottom: 1px solid #e7eaec;
 }
 .landing-page .navbar-fixed-top.navbar-scroll {
   border-bottom: 1px solid #e7eaec !important;
@@ -8585,4 +8585,11 @@ body.md-skin {
   border-radius: 0 0 5px 5px;
   font-weight: 700;
   transition: all 0.3s ease-in-out 0s;
+}
+.text-left{
+  text-align: left;
+}
+.gender-label{
+  font-weight: 700;
+  padding-right: 10px;
 }

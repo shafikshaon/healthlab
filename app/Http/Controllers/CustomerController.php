@@ -10,4 +10,8 @@ class CustomerController extends Controller
     {
       return view('front.login');
     }
+    public function getMyRegister()
+    {
+      return view('front.register');
+    }
 }

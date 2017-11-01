@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('front.index');
 });
 
+
 Route::get('login', ['as' =>'login', 'uses' => 'CustomerController@getMyLogin']);
+Route::get('register', ['as' =>'register', 'uses' => 'CustomerController@getMyRegister']);
 
 
 // Route::prefix('report')->group(function () {
