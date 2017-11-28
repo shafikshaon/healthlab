@@ -34,6 +34,33 @@ Route::get('finddoctor', ['as' =>'finddoctor', 'uses' => 'CustomerController@get
 Route::get('admin', ['as' =>'admin', 'uses' => 'DashboardController@getMyDashboard']);
 Route::get('dashboard', ['as' =>'dashboard', 'uses' => 'DashboardController@getMyDashboard']);
 
+//Admins
+Route::prefix('admin/admin')->group(function () {
+  Route::get('viewall', ['as' =>'viewalladmin', 'uses' => 'AdminCrudController@getAllAdmins']);
+});
+
+//Doctors
+Route::prefix('admin/doctor')->group(function () {
+  Route::get('viewall', ['as' =>'viewalldoctor', 'uses' => 'DoctorCrudController@getAllDoctors']);
+});
+
+//Patients
+Route::prefix('admin/patient')->group(function () {
+  Route::get('viewall', ['as' =>'viewallpatient', 'uses' => 'PatientCrudController@getAllPatients']);
+});
+
+//Developers
+Route::prefix('admin/developer')->group(function () {
+  Route::get('viewall', ['as' =>'viewalldeveloper', 'uses' => 'DeveloperCrudController@getAllDevelopers']);
+});
+
+
+
+
+
+
+
+
 Route::prefix('report')->group(function () {
   Route::get('pdf', ['as' =>'pdf', 'uses' => 'ReportGenerateController@getMyReport']);
   Route::get('alluser', ['as' =>'alluser', 'uses' => 'ReportGenerateController@viewAllUser']);
