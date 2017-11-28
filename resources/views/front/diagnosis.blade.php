@@ -3,6 +3,7 @@
 @section('title', 'Diagnosis')
 
 @section('content')
+
 <div class="diagnosisscreen animated fadeInDown">
     <div class="col-md-6 col-md-offset-3">
         <div class="ibox">
@@ -45,7 +46,7 @@
                             <div class="col-md-6 col-md-offset-3">
                                 <h2>I am</h2>
                                 <div class="form-group">
-                                    <label>Age *</label>
+                                    <label>Gender *</label>
                                     <select class="form-control" name="account" required>
                                         <option>Male</option>
                                         <option>Female</option>
@@ -64,12 +65,11 @@
                                 <h2>Choose organ</h2>
                             </div>
                             <div class="col-md-6 col-md-offset-3">
-                              <select data-placeholder="Choose a Country..." name="organ" class="chosen-select" style="width:350px;" tabindex="2">
+                              <select data-placeholder="Choose an Organ..." name="organ" class="chosen-select" style="width:350px;" tabindex="2">
                                 <option value="">Select</option>
-                                <option value="United States">United States</option>
-                                <option value="United Kingdom">United Kingdom</option>
-                                <option value="Afghanistan">Afghanistan</option>
-                                <option value="Aland Islands">Aland Islands</option>
+                                <option value="Head">Head</option>
+                                <option value="Nose">Nose</option>
+                                <option value="Eye">Eye</option> Islands</option>
                               </select>
                             </div>
                         </div>
