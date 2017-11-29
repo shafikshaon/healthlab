@@ -29,6 +29,11 @@ class CreateUsersTable extends Migration
       });
     }
 
+    public function userProfile()
+    {
+        return $this->hasOne('App\UserProfile');
+    }
+
     /**
      * Reverse the migrations.
      *
