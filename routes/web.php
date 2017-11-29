@@ -41,7 +41,11 @@ Route::prefix('admin/admin')->group(function () {
 
 //Doctors
 Route::prefix('admin/doctor')->group(function () {
+
+//  Route::get('/edit/{id}','DoctorCrudController@getSingleDoctor');
+
   Route::get('viewall', ['as' =>'viewalldoctor', 'uses' => 'DoctorCrudController@getAllDoctors']);
+    Route::get('edit/{id}', ['as' =>'editdoctor', 'uses' => 'DoctorCrudController@getSingleDoctor']);
 });
 
 //Patients

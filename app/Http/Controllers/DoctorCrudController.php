@@ -12,4 +12,10 @@ class DoctorCrudController extends Controller
     $doctors = User::where('account_type', 'Doctor')->orderBy('id','asc')->get();
     return view('back.doctor.viewall',['doctors' => $doctors]);
   }
+    public function getSingleDoctor($id){
+      return $id;
+//        $doctors = User::find($id);
+//        return view('update_student_info',['$doctors'=>$doctors]);
+
+    }
 }

@@ -8,3 +8,7 @@
 
 <!-- Data Tables -->
 <link href="{{asset('css/plugins/dataTables/datatables.min.css')}}" rel="stylesheet">
+
+
+<link href="{{asset('css/plugins/datapicker/datepicker3.css')}}" rel="stylesheet">
+<link href="{{asset('css/plugins/iCheck/custom.css')}}" rel="stylesheet">
