@@ -17,7 +17,7 @@
                 <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Admin</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                      <a href="{{route('add')}}">Add An Admin</a>
+                      <a href="">Add An Admin</a>
                     </li>
                     <li>
                       <a href="{{route('viewalladmin')}}">View All Admins</a>
@@ -28,7 +28,7 @@
                 <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Doctors</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                      <a href="{{route('add')}}">Add An Doctor</a>
+                      <a href="{{route('adddoctor')}}">Add An Doctor</a>
                     </li>
                     <li>
                       <a href="{{route('viewalldoctor')}}">View All Doctors</a>
@@ -39,7 +39,7 @@
                 <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Patients</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                      <a href="{{route('add')}}">Add An Patient</a>
+                      <a href="">Add An Patient</a>
                     </li>
                     <li>
                       <a href="{{route('viewallpatient')}}">View All Patients</a>
@@ -50,7 +50,7 @@
                 <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Developers</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                      <a href="{{route('add')}}">Add An Patient</a>
+                      <a href="">Add An Patient</a>
                     </li>
                     <li>
                       <a href="{{route('viewalldeveloper')}}">View All Developers</a>
