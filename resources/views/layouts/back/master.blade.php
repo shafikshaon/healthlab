@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>@yield('title') | Learn With Laravel</title>
+    <title>@yield('title') | Health Lab</title>
     @include('layouts.back.style')
   </head>
   <body>
@@ -16,3 +16,5 @@
     @include('layouts.back.script')
   </body>
 </html>
+
+

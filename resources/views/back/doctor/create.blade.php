@@ -61,7 +61,7 @@
             </div>
             <div class="form-group">
                 <label class="col-lg-2 control-label">Phone Number</label>
-                <div class="col-lg-10"><input type="text" name="phone_number" placeholder="Phone Numbere" class="form-control">
+                <div class="col-lg-10"><input type="text" name="phone_number" placeholder="Phone Number" class="form-control">
                 </div>
             </div>
             <div class="form-group">
