@@ -59,6 +59,7 @@ class DoctorCrudController extends Controller
         User::where('id', $id)->delete();
         return redirect()->route('viewalldoctor')->with('info', 'Doctor Information Deleted successfully');
     }
+
     public function readSingleDoctor($id){
         $doctors = User::find($id);
         return view('back.doctor.read',['doctors' => $doctors]);
