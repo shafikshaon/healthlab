@@ -57,6 +57,17 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Organs</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                      <a href="{{route('addorgan')}}">Add An Organ</a>
+                    </li>
+                    <li>
+                      <a href="{{route('viewallorgan')}}">View All Organs</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
 
     </div>

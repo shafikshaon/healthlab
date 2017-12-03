@@ -25,8 +25,8 @@ Route::get('diagnosis', ['as' =>'diagnosis', 'uses' => 'DiagnosisController@getM
 Route::get('finddoctor', ['as' =>'finddoctor', 'uses' => 'CustomerController@getMyLogin']);
 
 //
-Route::get('admin', ['as' =>'admin', 'uses' => 'DashboardController@getMyDashboard']);
-Route::get('dashboard', ['as' =>'dashboard', 'uses' => 'DashboardController@getMyDashboard']);
+Route::get('admin', ['as' =>'admin', 'uses' => 'BackEndController@getMyDashboard']);
+Route::get('admin', ['as' =>'dashboard', 'uses' => 'BackEndController@getMyDashboard']);
 
 //Admins
 Route::prefix('admin/admin')->group(function () {
@@ -58,4 +58,14 @@ Route::prefix('admin/patient')->group(function () {
 //Developers
 Route::prefix('admin/developer')->group(function () {
   Route::get('viewall', ['as' =>'viewalldeveloper', 'uses' => 'DeveloperCrudController@getAllDevelopers']);
+});
+
+//Organs
+Route::prefix('admin/organ')->group(function () {
+  Route::get('viewall', ['as' =>'viewallorgan', 'uses' => 'OrgansCrudController@getAllOrgan']);
+  Route::get('add', ['as' =>'addorgan', 'uses' => 'OrgansCrudController@getAddOrgan']);
+  Route::post('insert', ['as' =>'insertorgan', 'uses' => 'OrgansCrudController@postAddOrgan']);
+  Route::get('insert', ['as' =>'insertorgan', 'uses' => 'OrgansCrudController@postAddOrgan']);
+  Route::post('insert', ['as' =>'insertorgan', 'uses' => 'OrgansCrudController@postAddOrgan']);
+  Route::get('insert', ['as' =>'insertorgan', 'uses' => 'OrgansCrudController@postAddOrgan']);
 });
