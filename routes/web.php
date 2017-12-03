@@ -65,7 +65,7 @@ Route::prefix('admin/organ')->group(function () {
   Route::get('viewall', ['as' =>'viewallorgan', 'uses' => 'OrgansCrudController@getAllOrgan']);
   Route::get('add', ['as' =>'addorgan', 'uses' => 'OrgansCrudController@getAddOrgan']);
   Route::post('insert', ['as' =>'insertorgan', 'uses' => 'OrgansCrudController@postAddOrgan']);
-  Route::get('insert', ['as' =>'insertorgan', 'uses' => 'OrgansCrudController@postAddOrgan']);
-  Route::post('insert', ['as' =>'insertorgan', 'uses' => 'OrgansCrudController@postAddOrgan']);
-  Route::get('insert', ['as' =>'insertorgan', 'uses' => 'OrgansCrudController@postAddOrgan']);
+  Route::get('edit/{id}', ['as' =>'editorgan', 'uses' => 'OrgansCrudController@getEditOrgan']);
+  Route::post('update/{id}', ['as' =>'updateorgan', 'uses' => 'OrgansCrudController@postUpdateOrgan']);
+  Route::get('delete/{id}', ['as' =>'deleteorgan', 'uses' => 'OrgansCrudController@getDeleteOrgan']);
 });

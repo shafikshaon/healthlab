@@ -1,5 +1,5 @@
 @extends('layouts.back.master')
-@section('title', 'Add Organ')
+@section('title', 'Edit Organ')
 
 @section('content')
 <div class="wrapper wrapper-content">
@@ -16,11 +16,11 @@
         <h5>Add Organ</h5>
     </div>
     <div class="ibox-content wizard-card">
-        <form class="form-horizontal" action="{{route('insertorgan')}}" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" action="{{route('updateorgan', $organs->id)}}" method="post" enctype="multipart/form-data">
           {{ csrf_field() }}
             <div class="form-group">
                 <label class="col-lg-2 control-label">Organ Name</label>
-                <div class="col-lg-10"><input type="text" name="organ_name" placeholder="Organ Name" class="form-control">
+                <div class="col-lg-10"><input type="text" name="organ_name" placeholder="Organ Name" value="{{$organs->organ_name}}" class="form-control">
                   @if($errors->any())
                       <div class="alert-danger">
                       @foreach($errors->all() as $error)
@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
-                    <button class="btn btn-sm btn-primary" type="submit">Add Organ</button>
+                    <button class="btn btn-sm btn-primary" type="submit">Update Organ</button>
                 </div>
             </div>
         </form>
