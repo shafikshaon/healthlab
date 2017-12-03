@@ -16,11 +16,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('login', ['as' =>'login', 'uses' => 'CustomerController@getMyLogin']);
-Route::get('register', ['as' =>'register', 'uses' => 'CustomerController@getMyRegister']);
+Route::get('login', ['as' =>'login', 'uses' => 'AccountController@getMyLogin']);
+Route::get('register', ['as' =>'register', 'uses' => 'AccountController@getMyRegister']);
 
 
-Route::get('diagnosis', ['as' =>'diagnosis', 'uses' => 'FrontController@getMyDiagnosis']);
+Route::get('diagnosis', ['as' =>'diagnosis', 'uses' => 'DiagnosisController@getMyDiagnosis']);
+
 Route::get('finddoctor', ['as' =>'finddoctor', 'uses' => 'CustomerController@getMyLogin']);
 
 //
@@ -34,7 +35,6 @@ Route::prefix('admin/admin')->group(function () {
 
 //Doctors
 Route::prefix('admin/doctor')->group(function () {
-
   Route::get('viewall', ['as' =>'viewalldoctor', 'uses' => 'DoctorCrudController@getAllDoctors']);
 
   Route::get('add', ['as' =>'adddoctor', 'uses' => 'DoctorCrudController@getAddDoctor']);
@@ -43,12 +43,11 @@ Route::prefix('admin/doctor')->group(function () {
 
   Route::get('edit/{id}', ['as' =>'editdoctor', 'uses' => 'DoctorCrudController@getSingleDoctor']);
 
- Route::post('update/{id}', ['as' =>'updatedoctor', 'uses' => 'DoctorCrudController@updateSingleDoctor']);
- Route::get('delete/{id}', ['as' =>'deletedoctor', 'uses' => 'DoctorCrudController@deleteSingleDoctor']);
+  Route::post('update/{id}', ['as' =>'updatedoctor', 'uses' => 'DoctorCrudController@updateSingleDoctor']);
 
-    Route::get('read/{id}', ['as' =>'readdoctor', 'uses' => 'DoctorCrudController@readSingleDoctor']);
+  Route::get('delete/{id}', ['as' =>'deletedoctor', 'uses' => 'DoctorCrudController@deleteSingleDoctor']);
 
-
+  Route::get('read/{id}', ['as' =>'readdoctor', 'uses' => 'DoctorCrudController@readSingleDoctor']);
 });
 
 //Patients
