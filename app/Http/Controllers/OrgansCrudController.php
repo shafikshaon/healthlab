@@ -8,7 +8,7 @@ use App\Organ;
 use Input;
 Use Session;
 Use Carbon\Carbon;
-class organsCrudController extends Controller
+class OrgansCrudController extends Controller
 {
     public function getAddOrgan()
     {

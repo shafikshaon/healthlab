@@ -68,6 +68,17 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Diseases</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                      <a href="{{route('adddisease')}}">Add An Disease</a>
+                    </li>
+                    <li>
+                      <a href="{{route('viewalldisease')}}">View All Diseases</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
 
     </div>

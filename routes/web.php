@@ -69,3 +69,13 @@ Route::prefix('admin/organ')->group(function () {
   Route::post('update/{id}', ['as' =>'updateorgan', 'uses' => 'OrgansCrudController@postUpdateOrgan']);
   Route::get('delete/{id}', ['as' =>'deleteorgan', 'uses' => 'OrgansCrudController@getDeleteOrgan']);
 });
+
+//Diseases
+Route::prefix('admin/disease')->group(function () {
+  Route::get('viewall', ['as' =>'viewalldisease', 'uses' => 'DiseaseCrudController@getAllDisease']);
+  Route::get('add', ['as' =>'adddisease', 'uses' => 'DiseaseCrudController@getAddDisease']);
+  Route::post('insert', ['as' =>'insertdisease', 'uses' => 'DiseaseCrudController@postAddDisease']);
+  Route::get('edit/{id}', ['as' =>'editdisease', 'uses' => 'DiseaseCrudController@getEditDisease']);
+  Route::post('update/{id}', ['as' =>'updatedisease', 'uses' => 'DiseaseCrudController@postUpdateDisease']);
+  Route::get('delete/{id}', ['as' =>'deletedisease', 'uses' => 'DiseaseCrudController@getDeleteDisease']);
+});
