@@ -8551,10 +8551,24 @@ body.md-skin {
     margin: 0;
   }
 }
-
+.gender-label{
+  font-weight: bold;
+}
 .diagnosisscreen {
   padding-top: 60px;
 }
 .wizard-big.wizard > .content {
     min-height: 200px;
+}
+.landing-page h1{
+  font-size: 50px;;
+}
+.loginscreen{
+  margin-top: 55px;
+}
+.checkbox label{
+  padding-left: 0px;
+}
+.radio label{
+  padding-left: 10px;
 }

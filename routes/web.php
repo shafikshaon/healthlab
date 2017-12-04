@@ -15,9 +15,15 @@ Route::get('/', function () {
     return view('front.index');
 });
 
-
+//Login, Register
 Route::get('login', ['as' =>'login', 'uses' => 'AccountController@getMyLogin']);
 Route::get('register', ['as' =>'register', 'uses' => 'AccountController@getMyRegister']);
+Route::post('register', ['as' =>'registernewuser', 'uses' => 'AccountController@insertUser']);
+Route::post('login', ['as' =>'login', 'uses' => 'AccountController@postMyLogin']);
+Route::get('logout', ['as' =>'logout', 'uses' => 'AccountController@getLogout']);
+
+
+Route::get('profile', ['as' =>'adminprofile', 'uses' => 'AccountController@getAdminProfile']);
 
 
 Route::get('diagnosis', ['as' =>'diagnosis', 'uses' => 'DiagnosisController@getMyDiagnosis']);

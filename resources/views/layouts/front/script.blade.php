@@ -140,6 +140,11 @@
             calendarWeeks: true,
             autoclose: true
         });
+
+        $('#dob').change(function() {
+            var date = $(this).val();
+            $('#dob').attr('value', date);
+         });
   });
 
 

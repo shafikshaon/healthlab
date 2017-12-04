@@ -3,11 +3,20 @@
         <ul class="nav" id="side-menu">
             <li class="nav-header">
                 <div class="dropdown profile-element"> <span>
-                    <img alt="image" class="img-circle" src="{{asset('img/pic.jpg')}}" style="width: 64px; "/>
-                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold"><a href="profile.html">Shafik Shaon</a></strong></span>
+                        <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                         </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="{{route('adminprofile')}}">
+                        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{Auth::User()->fname}} {{Auth::User()->lname}}</strong>
+                        </span> <span class="text-muted text-xs block">{{Auth::User()->account_type}}<b class="caret"></b></span> </span> </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="{{route('adminprofile')}}">Profile</a></li>
+                        <li><a href="contacts.html">Account Setting</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{route('logout')}}">Logout</a></li>
+                    </ul>
                 </div>
                 <div class="logo-element">
-                    Shafik Shaon
+                    IN+
                 </div>
             </li>
             <li>
