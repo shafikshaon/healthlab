@@ -28,7 +28,7 @@
         </div>
     @endif
     <div class="ibox-content wizard-card">
-        <form class="form-horizontal" action="{{route('insertdocotr')}}" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" action="{{route('insertdoctor')}}" method="post" enctype="multipart/form-data">
           {{ csrf_field() }}
             <div class="form-group">
                 <label class="col-lg-2 control-label">First Name</label>
@@ -38,6 +38,11 @@
             <div class="form-group">
                 <label class="col-lg-2 control-label">Last Name</label>
                 <div class="col-lg-10"><input type="text" name="lname" placeholder="Last Name" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">User Name</label>
+                <div class="col-lg-10"><input type="text" name="uname" placeholder="Last Name" class="form-control">
                 </div>
             </div>
             <div class="form-group">
@@ -65,6 +70,16 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-lg-2 control-label">Building</label>
+                <div class="col-lg-10"><input type="text" name="building" placeholder="building" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Street</label>
+                <div class="col-lg-10"><input type="text" name="street" placeholder="street" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-lg-2 control-label">Country</label>
                 <div class="col-lg-10"><input type="text" name="country" placeholder="Country" class="form-control">
                 </div>
@@ -77,11 +92,6 @@
             <div class="form-group">
                 <label class="col-lg-2 control-label">Post Code</label>
                 <div class="col-lg-10"><input type="text" name="post_code" placeholder="Post Code" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-2 control-label">Address</label>
-                <div class="col-lg-10"><textarea type="text" name="address" placeholder="Address" class="form-control"></textarea>
                 </div>
             </div>
             <div class="form-group" id="data_1">
@@ -118,18 +128,29 @@
               </div>
             </div>
             <div class="form-group">
+                <label class="col-lg-2 control-label">Company Name</label>
+                <div class="col-lg-10"><input type="text" name="company_name" placeholder="Company Name" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Job Title</label>
+                <div class="col-lg-10"><input type="text" name="job_title" placeholder="Job Title" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-lg-2 control-label">Profile Picture</label>
                 <div class="col-lg-10 ">
                   <div class="picture-container">
                     <div class="picture">
                         <img src="{{asset('img/avatar.png')}}" class="picture-src" id="output_image"/>
-                        <input type="file" name='image' accept="image/*" onchange="preview_image(event)">
+                        <input type="file" name='img_path' accept="image/*" onchange="preview_image(event)">
                     </div>
                   </div>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
+                    <div class="i-checks"><label> <input type="checkbox"><i></i> Remember me </label></div>
                     <button class="btn btn-sm btn-primary" type="submit">Submit</button>
                 </div>
             </div>

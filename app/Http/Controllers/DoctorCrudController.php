@@ -19,8 +19,51 @@ class DoctorCrudController extends Controller
     return view('back.doctor.create');
   }
 
-  public function postInsertDoctor()
+  public function postInsertDoctor(Request $request)
   {
+      $this->validate($request,[
+          'fname'=>'required',
+          'lname'=>'required',
+          'uname'=>'required',
+          'email'=>'required',
+          'password'=>'required',
+          'phone_number'=>'required',
+          'building'=>'required',
+          'street'=>'required',
+          'country'=>'required',
+          'city'=>'required',
+          'post_code'=>'required',
+          'dob'=>'required',
+          'img_path'=>'required'
+
+      ]);
+      $doctors = new User;
+      $doctors_profile = new UserProfile;
+
+      $doctors->fname = $request->input('fname');
+      $doctors->lname = $request->input('lname');
+      $doctors->uname = $request->input('uname');
+      $doctors->email = $request->input('email');
+      $doctors->gender = $request->input('gender');
+      $doctors->dob = $request->input('dob');
+      $doctors->account_type = "Doctor";
+      $doctors->password = $request->input('password');
+      $doctors->save();
+
+      $doctors_profile->user_id = $doctors->id;
+      $doctors_profile->phone_number = $request->input('phone_number');
+      $doctors_profile->building = $request->input('building');
+      $doctors_profile->img_path = $request->input('img_path');
+      $doctors_profile->street = $request->input('street');
+      $doctors_profile->country = $request->input('country');
+      $doctors_profile->city = $request->input('city');
+      $doctors_profile->post_code = $request->input('post_code');
+      $doctors_profile->job_title = $request->input('job_title');
+      $doctors_profile->company_name = $request->input('company_name');
+
+      $doctors_profile->save();
+
+      return redirect()->route('viewalldoctor');
     
   }
   public function getSingleDoctor($id){
@@ -38,7 +81,7 @@ class DoctorCrudController extends Controller
             'email'=>'required',
             'password'=>'required',
             'dob'=>'required',
-            'phone_number'=>'required'
+            'phone_number'=>'required',
         ]);
         $data = array(
             'fname' => $request->input('fname'),

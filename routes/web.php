@@ -39,7 +39,7 @@ Route::prefix('admin/doctor')->group(function () {
 
   Route::get('add', ['as' =>'adddoctor', 'uses' => 'DoctorCrudController@getAddDoctor']);
 
-  Route::post('insert', ['as' =>'insertdocotr', 'uses' => 'DoctorCrudController@postInsertDoctor']);
+  Route::post('insert', ['as' =>'insertdoctor', 'uses' => 'DoctorCrudController@postInsertDoctor']);
 
   Route::get('edit/{id}', ['as' =>'editdoctor', 'uses' => 'DoctorCrudController@getSingleDoctor']);
 
