@@ -79,6 +79,17 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Symptom</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                      <a href="{{route('addsymptom')}}">Add An Symptom</a>
+                    </li>
+                    <li>
+                      <a href="{{route('viewallsymptom')}}">View All Symptom</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
 
     </div>

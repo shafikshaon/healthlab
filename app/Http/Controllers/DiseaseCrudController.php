@@ -24,6 +24,7 @@ class DiseaseCrudController extends Controller
       ]);
       $disease = new Disease();
       $disease->disease_name = Input::get('disease_name');
+      $disease->organ_id = Input::get('organ_id');
       $disease->created_at = Carbon::now('Asia/Dhaka');
       $disease->updated_at = Carbon::now('Asia/Dhaka');
       $disease->save();
@@ -52,9 +53,10 @@ class DiseaseCrudController extends Controller
       ]);
       $disease = Disease::findOrFail($id);
       $disease->disease_name = Input::get('disease_name');
+      $disease->organ_id = Input::get('organ_id');
       $disease->updated_at = Carbon::now('Asia/Dhaka');
       $disease->save();
-      Session::flash('success', 'disease updated successfully!');
+      Session::flash('success', 'Disease updated successfully!');
       // return redirect()->route('adminList', ['id' => $id);
       return back()->withInput();
     }

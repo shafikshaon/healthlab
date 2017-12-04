@@ -12,8 +12,8 @@
                   <thead>
                     <tr>
                         <th>Sl</th>
-                        <th>Disease Name</th>
-                        <th>Organ Id</th>
+                        <th>Symptom</th>
+                        <th>Disease Id</th>
                         <th>Added On</th>
                         <th>Updated On</th>
                         <th>Action</th>
@@ -21,16 +21,16 @@
                   </thead>
                   <tbody>
                     <?php $sl = 1; ?>
-                    @foreach($diseases as $disease)
+                    @foreach($symptoms as $symptom)
                       <tr class="gradeA">
                           <td>{{$sl++}}</td>
-                          <td>{{$disease->disease_name}}</td>
-                          <td>{{$disease->organ_id}}</td>
-                          <td>{{$disease->created_at->diffForHumans()}}</td>
-                          <td>{{$disease->updated_at->diffForHumans()}}</td>
+                          <td>{{$symptom->symptom}}</td>
+                          <td>{{$symptom->disease_id}}</td>
+                          <td>{{$symptom->created_at->diffForHumans()}}</td>
+                          <td>{{$symptom->updated_at->diffForHumans()}}</td>
                           <td>
-                            <a href="{{route('editdisease', [$disease->id])}}" class="btn label label-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="btn label label-danger" href="javascript:void()" data-href="{{ route('deletedisease', $disease->id)}}"  data-toggle="modal" data-target="#confirm-delete"  data-toggle="tooltip" title="Delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <a href="{{route('editsymptom', [$symptom->id])}}" class="btn label label-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a class="btn label label-danger" href="javascript:void()" data-href="{{ route('deletesymptom', $symptom->id)}}"  data-toggle="modal" data-target="#confirm-delete"  data-toggle="tooltip" title="Delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                           </td>
                       </tr>
                     @endforeach

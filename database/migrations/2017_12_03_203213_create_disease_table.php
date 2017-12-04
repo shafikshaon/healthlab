@@ -16,6 +16,7 @@ class CreateDiseaseTable extends Migration
         Schema::create('diseases', function (Blueprint $table) {
             $table->increments('id');
             $table->string('disease_name');
+            $table->integer('organ_id')->unsigned();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });
