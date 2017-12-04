@@ -34,7 +34,6 @@ class DoctorCrudController extends Controller
           'city'=>'required',
           'post_code'=>'required',
           'dob'=>'required',
-          'img_path'=>'required'
 
       ]);
       $doctors = new User;
@@ -53,13 +52,21 @@ class DoctorCrudController extends Controller
       $doctors_profile->user_id = $doctors->id;
       $doctors_profile->phone_number = $request->input('phone_number');
       $doctors_profile->building = $request->input('building');
-      $doctors_profile->img_path = $request->input('img_path');
       $doctors_profile->street = $request->input('street');
       $doctors_profile->country = $request->input('country');
       $doctors_profile->city = $request->input('city');
       $doctors_profile->post_code = $request->input('post_code');
       $doctors_profile->job_title = $request->input('job_title');
       $doctors_profile->company_name = $request->input('company_name');
+      $doctors_profile->blood_group = $request->input('blood_group');
+
+      $file_name = time().$_FILES['image']['name'];
+      $file_tmp =$_FILES['image']['tmp_name'];
+
+      if(empty($errors)==true){
+          move_uploaded_file($file_tmp,base_path()."/public/uploads/".$file_name);
+      }
+      $doctors_profile->img_path = $file_name;
 
       $doctors_profile->save();
 

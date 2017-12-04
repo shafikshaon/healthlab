@@ -20,7 +20,7 @@
                     <div id="tab-1" class="tab-pane active">
                         <div class="panel-body">
                             <div class="ibox-content wizard-card">
-                                <form class="form-horizontal" action="{{route('insertdocotr')}}" method="post" enctype="multipart/form-data">
+                                <form class="form-horizontal" action="{{route('insertdoctor')}}" method="post" enctype="multipart/form-data">
                                   {{ csrf_field() }}
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label">First Name</label>
@@ -58,7 +58,7 @@
                     <div id="tab-2" class="tab-pane">
                         <div class="panel-body">
                           <div class="ibox-content wizard-card">
-                             <form class="form-horizontal" action="{{route('insertdocotr')}}" method="post" enctype="multipart/form-data">
+                             <form class="form-horizontal" action="{{route('insertdoctor')}}" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Building</label>
@@ -98,7 +98,7 @@
                     <div id="tab-3" class="tab-pane">
                         <div class="panel-body">
                             <div class="ibox-content wizard-card">
-                                <form class="form-horizontal" action="{{route('insertdocotr')}}" method="post" enctype="multipart/form-data">
+                                <form class="form-horizontal" action="{{route('insertdoctor')}}" method="post" enctype="multipart/form-data">
                                   {{ csrf_field() }}
                                     <div class="form-group">
                                         <label class="col-lg-3 control-label">Current Password</label>
@@ -128,7 +128,7 @@
 
                     <div id="tab-4" class="tab-pane">
                         <div class="ibox-content wizard-card">
-                            <form class="form-horizontal" action="{{route('insertdocotr')}}" method="post" enctype="multipart/form-data">
+                            <form class="form-horizontal" action="{{route('insertdoctor')}}" method="post" enctype="multipart/form-data">
                               {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Phone Number</label>
@@ -172,7 +172,7 @@
                     <div id="tab-5" class="tab-pane">
                         <div class="panel-body">
                             <div class="ibox-content wizard-card">
-                                <form class="form-horizontal" action="{{route('insertdocotr')}}" method="post" enctype="multipart/form-data">
+                                <form class="form-horizontal" action="{{route('insertdoctor')}}" method="post" enctype="multipart/form-data">
                                   {{ csrf_field() }}
                                     <div class="form-group">
                                         <label class="col-lg-3 control-label">Job Title</label>
@@ -198,7 +198,7 @@
                     <div id="tab-6" class="tab-pane">
                             <div class="panel-body">
                               <div class="ibox-content wizard-card">
-                                  <form class="form-horizontal" action="{{route('insertdocotr')}}" method="post" enctype="multipart/form-data">
+                                  <form class="form-horizontal" action="{{route('insertdoctor')}}" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label">Profile Picture</label>

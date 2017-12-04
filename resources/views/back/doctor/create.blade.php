@@ -143,7 +143,7 @@
                   <div class="picture-container">
                     <div class="picture">
                         <img src="{{asset('img/avatar.png')}}" class="picture-src" id="output_image"/>
-                        <input type="file" name='img_path' accept="image/*" onchange="preview_image(event)">
+                        <input type="file" name='image' accept="image/*" onchange="preview_image(event)">
                     </div>
                   </div>
                 </div>
