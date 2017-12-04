@@ -95,7 +95,12 @@
                 </ul>
             </li>
             <li>
-                <a href="">
+                <a href="{{route('adminprofile')}}">
+                    <i class="fa fa-user"></i> {{Auth::User()->uname}}
+                </a>
+            </li>
+            <li>
+                <a href="{{route('logout')}}">
                     <i class="fa fa-sign-out"></i> Log out
                 </a>
             </li>
