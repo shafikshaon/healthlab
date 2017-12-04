@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 Use App\User;
+Use App\UserProfile;
 use Illuminate\Http\Request;
 
 class DoctorCrudController extends Controller
@@ -24,10 +25,10 @@ class DoctorCrudController extends Controller
   }
   public function getSingleDoctor($id){
         $doctors = User::find($id);
-        return view('back.doctor.edit',['doctors' => $doctors]);
+      $doctors_profile = UserProfile::find($id);
+        return view('back.doctor.edit',['doctors' => $doctors, 'doctors_profile' => $doctors_profile]);
 
   }
-
 
     public function updateSingleDoctor(Request $request, $id){
         $this->validate($request,[
@@ -36,7 +37,8 @@ class DoctorCrudController extends Controller
             'uname'=>'required',
             'email'=>'required',
             'password'=>'required',
-            'dob'=>'required'
+            'dob'=>'required',
+            'phone_number'=>'required'
         ]);
         $data = array(
             'fname' => $request->input('fname'),
@@ -44,11 +46,25 @@ class DoctorCrudController extends Controller
             'uname' => $request->input('uname'),
             'email' => $request->input('email'),
             'Password' => $request->input('password'),
-            'dob' => $request->input('dob')
+            'dob' => $request->input('dob'),
+            'gender' => $request->input('gender')
+
+
+        );
+        $profiledata = array(
+            'phone_number' => $request->input('phone_number'),
+            'building' => $request->input('building'),
+            'street' => $request->input('street'),
+            'city' => $request->input('city'),
+            'post_code' => $request->input('post_code'),
+            'country' => $request->input('country'),
+            'company_name' => $request->input('company_name'),
+            'job_title' => $request->input('job_title'),
 
 
         );
         User::where('id',$id)->update($data);
+        UserProfile::where('id',$id)->update($profiledata);
         return redirect()->route('viewalldoctor')->with('info','Doctor Information updated successfully');
 
     }
