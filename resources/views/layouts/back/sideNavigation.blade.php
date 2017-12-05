@@ -9,7 +9,7 @@
                         <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{Auth::User()->fname}} {{Auth::User()->lname}}</strong>
                         </span> <span class="text-muted text-xs block">{{Auth::User()->account_type}}<b class="caret"></b></span> </span> </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="{{route('adminprofile')}}">Profile</a></li>
+                        <li><a href="{{route('single_profile', [Auth::User()->id])}}">Profile</a></li>
                         <li><a href="contacts.html">Account Setting</a></li>
                         <li class="divider"></li>
                         <li><a href="{{route('logout')}}">Logout</a></li>

@@ -74,9 +74,9 @@ class DoctorCrudController extends Controller
     
   }
   public function getSingleDoctor($id){
-        $doctors = User::find($id);
+      $doctors = User::find($id);
       $doctors_profile = UserProfile::find($id);
-        return view('back.doctor.edit',['doctors' => $doctors, 'doctors_profile' => $doctors_profile]);
+      return view('back.doctor.edit',['doctors' => $doctors, 'doctors_profile' => $doctors_profile]);
 
   }
 

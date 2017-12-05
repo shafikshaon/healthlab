@@ -22,9 +22,28 @@ Route::post('register', ['as' =>'registernewuser', 'uses' => 'AccountController@
 Route::post('login', ['as' =>'login', 'uses' => 'AccountController@postMyLogin']);
 Route::get('logout', ['as' =>'logout', 'uses' => 'AccountController@getLogout']);
 
-//Profile
-Route::get('profile', ['as' =>'adminprofile', 'uses' => 'AccountController@getAdminProfile']);
 
+
+//Profiles
+Route::get('profile', ['as' =>'adminprofile', 'uses' => 'AccountController@getAdminProfile']);
+Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileController@getSingleAdmin']);
+
+/*Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileController@getSingleAdmin']);
+
+Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileController@getSingleAdmin']);
+
+Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileController@getSingleAdmin']);
+
+Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileController@getSingleAdmin']);
+
+Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileController@getSingleAdmin']);
+
+Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileController@getSingleAdmin']);
+
+Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileController@getSingleAdmin']);
+
+Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileController@getSingleAdmin']);
+*/
 
 
 
