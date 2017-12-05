@@ -16,7 +16,7 @@
                     </ul>
                 </div>
                 <div class="logo-element">
-                    IN+
+                    HL
                 </div>
             </li>
             <li>

@@ -33,6 +33,10 @@ class DoctorController extends Controller
         $gender = $request->input('gender');
         $job_title = $request->input('job_title');
 
+        $search = UserProfile::search($location, $job_title);
+        dd($search);
+        // dd($location, $gender, $job_title);
+
         return view('front.finddoctor');
     }
 }
