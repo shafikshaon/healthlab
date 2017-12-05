@@ -94,6 +94,12 @@ Route::prefix('admin/doctor')->group(function () {
 //Patients
 Route::prefix('admin/patient')->group(function () {
   Route::get('viewall', ['as' =>'viewallpatient', 'uses' => 'PatientCrudController@getAllPatients']);
+
+    Route::get('add', ['as' =>'addpatient', 'uses' => 'PatientCrudController@getAddPatient']);
+    Route::post('insert', ['as' =>'insertpatient', 'uses' => 'PatientCrudController@postInsertPatient']);
+
+
+
     Route::get('edit/{id}', ['as' =>'editpatient', 'uses' => 'PatientCrudController@getSinglePatient']);
     Route::post('update/{id}', ['as' =>'updatepatient', 'uses' => 'PatientCrudController@updateSinglePatient']);
     Route::get('delete/{id}', ['as' =>'deletepatient', 'uses' => 'PatientCrudController@deleteSinglePatient']);

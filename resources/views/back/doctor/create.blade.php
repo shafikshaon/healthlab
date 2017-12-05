@@ -55,16 +55,6 @@
                 <div class="col-lg-10"><input type="password" name="password" placeholder="Password" class="form-control"></div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Admin User Type</label>
-                <div class="col-sm-10">
-                  <select class="form-control" name="admin_user_type">
-                    <option value="1">Super Admin</option>
-                    <option value="2">Mid Level Admin</option>
-                    <option value="3">Third Level Admin</option>
-                  </select>
-                </div>
-            </div>
-            <div class="form-group">
                 <label class="col-lg-2 control-label">Phone Number</label>
                 <div class="col-lg-10"><input type="text" name="phone_number" placeholder="Phone Number" class="form-control">
                 </div>
@@ -150,7 +140,6 @@
             </div>
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
-                    <div class="i-checks"><label> <input type="checkbox"><i></i> Remember me </label></div>
                     <button class="btn btn-sm btn-primary" type="submit">Submit</button>
                 </div>
             </div>

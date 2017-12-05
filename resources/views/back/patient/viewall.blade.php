@@ -28,9 +28,9 @@
                           <td>{{$patient->dob}}</td>
                           <td>{{$patient->created_at->diffForHumans()}}</td>
                           <td>
-                            <a href="#" class="btn label label-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                            <a href="#" class="btn label label-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a href="#" class="btn label label-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <a href="{{route('readpatient', [$patient->id])}}" class="btn label label-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                            <a href="{{route('editpatient', [$patient->id])}}" class="btn label label-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a href="{{route('deletepatient', [$patient->id])}}" class="btn label label-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                           </td>
                       </tr>
                     @endforeach
