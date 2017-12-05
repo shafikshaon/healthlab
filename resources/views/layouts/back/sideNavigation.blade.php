@@ -48,7 +48,7 @@
                 <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Patients</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                      <a href="">Add An Patient</a>
+                      <a href="{{route('addpatient')}}">Add An Patient</a>
                     </li>
                     <li>
                       <a href="{{route('viewallpatient')}}">View All Patients</a>
