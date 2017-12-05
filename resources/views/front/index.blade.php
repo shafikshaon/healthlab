@@ -60,7 +60,7 @@
                 <div class="carousel-caption blank">
                     <h1>Doctor Directory</h1>
                     <p>All important information including specialty, address, patient visit time and phone number of renowned doctors.</p>
-                    <p><a class="btn btn-lg btn-primary" href="{{('finddoctor')}}" role="button">Find Doctor</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="{{route('finddoctor')}}" role="button">Find Doctor</a></p>
                 </div>
             </div>
             <!-- Set background for slide in css -->
