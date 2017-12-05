@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 Use App\User;
 Use App\UserProfile;
+use Auth;
 use Illuminate\Http\Request;
 
 class PatientCrudController extends Controller
@@ -15,8 +16,9 @@ class PatientCrudController extends Controller
   }
     public function getSinglePatient($id){
         $patients = User::find($id);
-        $patients_profile = UserProfile::find($id);
-        return view('back.patient.edit',['patients' => $patients, 'patients_profile' => $patients_profile]);
+        $profile = UserProfile::where('user_id', $id)->get()->first();
+
+        return view('back.patient.edit',['patients' => $patients, 'profile' => $profile]);
 
     }
     public function updateSinglePatient(Request $request, $id){

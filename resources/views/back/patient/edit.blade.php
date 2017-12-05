@@ -56,11 +56,6 @@
                         <div class="col-lg-10"><input type="password" value="<?php  echo $patients->password; ?>" name="password" placeholder="Password" class="form-control"></div>
                     </div>
                     <div class="form-group">
-                        <label class="col-lg-2 control-label">Phone Number</label>
-                        <div class="col-lg-10"><input type="text" name="phone_number" value="<?php  echo $patients_profile->phone_number; ?>" placeholder="Phone Number" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label class="col-lg-2 control-label">Gender</label>
                         <div class="col-lg-10">
                             <select class="form-control" name="gender">
@@ -74,14 +69,14 @@
                         <label class="col-lg-2 control-label">Blood Group</label>
                         <div class="col-lg-10">
                             <select class="form-control" name="blood_group">
-                                <option value="A+" {{($patients_profile->blood_group == 'A+') ? "selected" : ""}}>A+</option>
-                                <option value="A-" {{($patients_profile->blood_group == 'A-') ? "selected" : ""}}>A-</option>
-                                <option value="B+" {{($patients_profile->blood_group == 'B+') ? "selected" : ""}}>B+</option>
-                                <option value="B-" {{($patients_profile->blood_group == 'B-') ? "selected" : ""}}>B-</option>
-                                <option value="AB+" {{($patients_profile->blood_group == 'AB+') ? "selected" : ""}}>AB+</option>
-                                <option value="AB-" {{($patients_profile->blood_group == 'AB-') ? "selected" : ""}}>AB-</option>
-                                <option value="O+" {{($patients_profile->blood_group == 'O+') ? "selected" : ""}}>O+</option>
-                                <option value="O-" {{($patients_profile->blood_group == 'O-') ? "selected" : ""}}>O-</option>
+                                <option value="A+" {{($profile->blood_group == 'A+') ? "selected" : ""}}>A+</option>
+                                <option value="A-" {{($profile->blood_group == 'A-') ? "selected" : ""}}>A-</option>
+                                <option value="B+" {{($profile->blood_group == 'B+') ? "selected" : ""}}>B+</option>
+                                <option value="B-" {{($profile->blood_group == 'B-') ? "selected" : ""}}>B-</option>
+                                <option value="AB+" {{($profile->blood_group == 'AB+') ? "selected" : ""}}>AB+</option>
+                                <option value="AB-" {{($profile->blood_group == 'AB-') ? "selected" : ""}}>AB-</option>
+                                <option value="O+" {{($profile->blood_group == 'O+') ? "selected" : ""}}>O+</option>
+                                <option value="O-" {{($profile->blood_group == 'O-') ? "selected" : ""}}>O-</option>
                             </select>
                         </div>
                     </div>
@@ -95,37 +90,42 @@
                     </div>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Building</label>
-                        <div class="col-lg-10"><input type="text" name="building" value="<?php  echo $patients_profile->building; ?>" placeholder="building" class="form-control">
+                        <div class="col-lg-10"><input type="text" name="building" value="<?php  echo $profile->building; ?>" placeholder="building" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Street</label>
-                        <div class="col-lg-10"><input type="text" name="street" value="<?php  echo $patients_profile->street; ?>" placeholder="street" class="form-control">
+                        <div class="col-lg-10"><input type="text" name="street" value="<?php  echo $profile->street; ?>" placeholder="street" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Phone Number</label>
+                        <div class="col-lg-10"><input type="text" name="phone_number" value="<?php  echo $profile->phone_number; ?>" placeholder="street" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">City</label>
-                        <div class="col-lg-10"><input type="text" name="city" value="<?php  echo $patients_profile->city; ?>" placeholder="City" class="form-control">
+                        <div class="col-lg-10"><input type="text" name="city" value="<?php  echo $profile->city; ?>" placeholder="City" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Post Code</label>
-                        <div class="col-lg-10"><input type="text" name="post_code" value="<?php  echo $patients_profile->post_code; ?>" placeholder="Post Code" class="form-control">
+                        <div class="col-lg-10"><input type="text" name="post_code" value="<?php  echo $profile->post_code; ?>" placeholder="Post Code" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Country</label>
-                        <div class="col-lg-10"><input type="text" name="country" value="<?php  echo $patients_profile->country; ?>" placeholder="Country" class="form-control">
+                        <div class="col-lg-10"><input type="text" name="country" value="<?php  echo $profile->country; ?>" placeholder="Country" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Company Name</label>
-                        <div class="col-lg-10"><input type="text" name="company_name" value="<?php  echo $patients_profile->company_name; ?>" placeholder="Company Name" class="form-control">
+                        <div class="col-lg-10"><input type="text" name="company_name" value="<?php  echo $profile->company_name; ?>" placeholder="Company Name" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Job Title</label>
-                        <div class="col-lg-10"><input type="text" name="job_title" value="<?php  echo $patients_profile->job_title; ?>" placeholder="Job Title" class="form-control">
+                        <div class="col-lg-10"><input type="text" name="job_title" value="<?php  echo $profile->job_title; ?>" placeholder="Job Title" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
@@ -139,3 +139,4 @@
         </div>
     </div>
 @endsection
+

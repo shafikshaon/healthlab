@@ -12,8 +12,8 @@
                         <?php
                         $user_profile = App\UserProfile::where('user_id', $doctors->id)->get();
                         ?>
-                            @foreach($user_profile as $img)
-                        <img alt="image" class="img-circle" src="profile_img/{{$img->img_path}}">
+                            @foreach($user_profile as $profile)
+                                <img src="{{asset('uploads/'.$profile->img_path)}}" alt="profile" class="img-lg">
                             @endforeach
                         <p class="m-b-xs"><strong>Full Name: </strong>{{$doctors->fname}} {{$doctors->lname}}</p>
                         <p><strong>User name:</strong> {{$doctors->uname}} </p>
@@ -26,6 +26,7 @@
                     </a>
                     @foreach($user_profile as $profile)
                     <div class="contact-box-footer">
+                        <p><strong>Blood Group:</strong> {{$profile->blood_group}} </p>
                         <p><strong>Job Title :</strong> {{$profile->job_title}} </p>
                         <p><strong>Company Name:</strong> {{$profile->company_name}} </p>
                         <address class="m-t-md">
@@ -33,7 +34,6 @@
                             Building : {{$profile->building}}, Street: {{$profile->street}}<br>
                             City : {{$profile->city}},<br> Country: {{$profile->country}}
                         </address>
-
                         <div class="m-t-xs btn-group">
                             <a class="btn btn-xs btn-white"><i class="fa fa-phone"></i> {{$profile->phone_number}}</a>
                         </div>
