@@ -34,7 +34,7 @@ class DoctorCrudController extends Controller
           'city'=>'required',
           'post_code'=>'required',
           'dob'=>'required',
-          'user_type'=>'required'
+//          'user_type'=>'required'
 
       ]);
       $doctors = new User;
