@@ -19,6 +19,11 @@ class CreateUserProfilesTable extends Migration
           $table->string('img_path')->nullable();
           $table->string('blood_group')->nullable();
           $table->string('phone_number')->nullable();
+          $table->string('educational_qualification')->nullable();
+          $table->string('blood_pressure_systolic')->nullable();
+          $table->string('blood_pressure_diastolic')->nullable();
+          $table->string('height')->nullable();
+          $table->string('weight')->nullable();
           $table->string('building')->nullable();
           $table->string('street')->nullable();
           $table->string('city')->nullable();
