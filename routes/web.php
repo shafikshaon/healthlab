@@ -106,18 +106,6 @@ Route::prefix('admin/patient')->group(function () {
 Route::prefix('admin/developer')->group(function () {
   Route::get('viewall', ['as' =>'viewalldeveloper', 'uses' => 'DeveloperCrudController@getAllDevelopers']);
 
-
-
-
-
-
-
-
-
-
-
-
-
 });
 
 //Organs
