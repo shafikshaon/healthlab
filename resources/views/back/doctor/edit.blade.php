@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label class="col-lg-2 control-label">User Name</label>
-                <div class="col-lg-10"><input type="text" name="uname" value="<?php  echo $doctors->uname; ?>" placeholder="Last Name" class="form-control">
+                <div class="col-lg-10"><input type="text" name="uname" value="<?php  echo $doctors->uname; ?>" placeholder="User Name" class="form-control">
                 </div>
             </div>
 
@@ -95,12 +95,12 @@
             </div>
             <div class="form-group">
                 <label class="col-lg-2 control-label">Height</label>
-                <div class="col-lg-10"><input type="text" name="height" value="<?php  echo $doctors_profile->height; ?>" placeholder="Height" class="form-control">
+                <div class="col-lg-10"><input type="text" name="height" value="<?php  echo $doctors_profile->height; ?>" placeholder="Height in cm" class="form-control">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-lg-2 control-label">Weight</label>
-                <div class="col-lg-10"><input type="text" name="weight" value="<?php  echo $doctors_profile->weight; ?>" placeholder="weight" class="form-control">
+                <div class="col-lg-10"><input type="text" name="weight" value="<?php  echo $doctors_profile->weight; ?>" placeholder="Weight in kg" class="form-control">
                 </div>
             </div>
 
@@ -112,7 +112,7 @@
             </div>
             <div class="form-group">
                 <label class="col-lg-2 control-label">Street</label>
-                <div class="col-lg-10"><input type="text" name="street" value="<?php  echo $doctors_profile->street; ?>" placeholder="street" class="form-control">
+                <div class="col-lg-10"><input type="text" name="street" value="<?php  echo $doctors_profile->street; ?>" placeholder="Street" class="form-control">
                 </div>
             </div>
             <div class="form-group">
@@ -142,8 +142,7 @@
             </div>
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
-                    <button class="btn btn-sm btn-primary" type="submit">update</button>
-                    {{--<a href="{{url('/')}}" class="btn btn-primary">Back</a>--}}
+                    <button class="btn btn-sm btn-primary" type="submit">Update</button>
                 </div>
             </div>
         </form>

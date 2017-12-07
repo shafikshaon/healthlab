@@ -52,7 +52,7 @@ class DoctorCrudController extends Controller
       $doctors->gender = $request->input('gender');
       $doctors->dob = $request->input('dob');
       $doctors->account_type = "Doctor";
-      $doctors->password = $request->input('password');
+      $doctors->password = \Hash::make($request->input('password'));
       $doctors->save();
 
       $doctors_profile->user_id = $doctors->id;
@@ -84,7 +84,7 @@ class DoctorCrudController extends Controller
       $doctors_profile->save();
 
       return redirect()->route('viewalldoctor');
-    
+
   }
   public function getSingleDoctor($id){
       $doctors = User::find($id);
@@ -113,7 +113,7 @@ class DoctorCrudController extends Controller
             'lname' => $request->input('lname'),
             'uname' => $request->input('uname'),
             'email' => $request->input('email'),
-            'Password' => $request->input('password'),
+            'Password' => \Hash::make($request->input('password')),
             'dob' => $request->input('dob'),
             'gender' => $request->input('gender')
 
