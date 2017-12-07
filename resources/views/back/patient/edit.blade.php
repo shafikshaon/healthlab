@@ -89,6 +89,32 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-lg-2 control-label">Educational Qualification</label>
+                        <div class="col-lg-10"><input type="text" name="educational_qualification" value="<?php  echo $profile->educational_qualification; ?>" placeholder="Educational Qualification" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Blood Pressure Systolic</label>
+                        <div class="col-lg-10"><input type="text" name="blood_pressure_systolic" value="<?php  echo $profile->blood_pressure_systolic; ?>" placeholder="Blood Pressure Systolic" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Blood Pressure Diastolic</label>
+                        <div class="col-lg-10"><input type="text" name="blood_pressure_diastolic" value="<?php  echo $profile->blood_pressure_diastolic; ?>" placeholder="Blood Pressure Diastolic" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Height</label>
+                        <div class="col-lg-10"><input type="text" name="height" value="<?php  echo $profile->height; ?>" placeholder="Height" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Weight</label>
+                        <div class="col-lg-10"><input type="text" name="weight" value="<?php  echo $profile->weight; ?>" placeholder="weight" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label class="col-lg-2 control-label">Building</label>
                         <div class="col-lg-10"><input type="text" name="building" value="<?php  echo $profile->building; ?>" placeholder="building" class="form-control">
                         </div>

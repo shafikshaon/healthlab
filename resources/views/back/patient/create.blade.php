@@ -42,7 +42,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">User Name</label>
-                        <div class="col-lg-10"><input type="text" name="uname" placeholder="Last Name" class="form-control">
+                        <div class="col-lg-10"><input type="text" name="uname" placeholder="User Name" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
@@ -82,6 +82,32 @@
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Post Code</label>
                         <div class="col-lg-10"><input type="text" name="post_code" placeholder="Post Code" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Educational Qualification</label>
+                        <div class="col-lg-10"><input type="text" name="educational_qualification" placeholder="Educational Qalification" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Blood Pressure Systolic</label>
+                        <div class="col-lg-10"><input type="text" name="blood_pressure_systolic" placeholder="Blood Pressure Systolic" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Blood Pressure Diastolic</label>
+                        <div class="col-lg-10"><input type="text" name="blood_pressure_diastolic" placeholder="Blood Pressure Diastolic" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Height</label>
+                        <div class="col-lg-10"><input type="text" name="height" placeholder="Height" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Weight</label>
+                        <div class="col-lg-10"><input type="text" name="weight" placeholder="Weight" class="form-control">
                         </div>
                     </div>
                     <div class="form-group" id="data_1">

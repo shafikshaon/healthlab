@@ -14,6 +14,6 @@ class UserProfile extends Authenticatable
    * @var array
    */
   protected $fillable = [
-      'user_id','img_path', 'phone_number', 'building', 'street', 'city', 'post_code', 'country', 'job_title', 'company_name'
+      'user_id','img_path', 'phone_number', 'building', 'street', 'city', 'post_code', 'country', 'job_title', 'company_name','educational_qualification','blood_pressure_systolic','blood_pressure_diastolic','height','weight'
   ];
 }

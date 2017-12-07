@@ -34,6 +34,11 @@ class DoctorCrudController extends Controller
           'city'=>'required',
           'post_code'=>'required',
           'dob'=>'required',
+          'educational_qualification'=>'required',
+          'blood_pressure_systolic'=>'required',
+          'blood_pressure_diastolic'=>'required',
+          'height'=>'required',
+          'weight'=>'required'
 //          'user_type'=>'required'
 
       ]);
@@ -60,6 +65,13 @@ class DoctorCrudController extends Controller
       $doctors_profile->job_title = $request->input('job_title');
       $doctors_profile->company_name = $request->input('company_name');
       $doctors_profile->blood_group = $request->input('blood_group');
+      $doctors_profile->educational_qualification = $request->input('educational_qualification');
+      $doctors_profile->blood_pressure_systolic = $request->input('blood_pressure_systolic');
+      $doctors_profile->blood_pressure_diastolic = $request->input('blood_pressure_diastolic');
+      $doctors_profile->height = $request->input('height');
+      $doctors_profile->weight = $request->input('weight');
+
+
 
       $file_name = time().$_FILES['image']['name'];
       $file_tmp =$_FILES['image']['tmp_name'];
@@ -90,6 +102,11 @@ class DoctorCrudController extends Controller
             'password'=>'required',
             'dob'=>'required',
             'phone_number'=>'required',
+            'educational_qualification'=>'required',
+            'blood_pressure_systolic'=>'required',
+            'blood_pressure_diastolic'=>'required',
+            'height'=>'required',
+            'weight'=>'required'
         ]);
         $data = array(
             'fname' => $request->input('fname'),
@@ -111,7 +128,13 @@ class DoctorCrudController extends Controller
             'country' => $request->input('country'),
             'company_name' => $request->input('company_name'),
             'job_title' => $request->input('job_title'),
+            'educational_qualification' => $request->input('educational_qualification'),
 
+
+            'blood_pressure_diastolic'=> $request->input('blood_pressure_diastolic'),
+            'blood_pressure_systolic'=> $request->input('blood_pressure_systolic'),
+            'height'=> $request->input('height'),
+            'weight'=> $request->input('weight'),
 
         );
         User::where('id',$id)->update($data);

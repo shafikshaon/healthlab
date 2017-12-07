@@ -27,6 +27,11 @@
 
                     @foreach($user_profile as $profile)
                         <div class="contact-box-footer">
+                            <p><strong>Educational Qualification:</strong> {{$profile->educational_qualification}} </p>
+                            <p><strong>Blood Pressure Systolic:</strong> {{$profile->blood_pressure_systolic}} </p>
+                            <p><strong>Blood Pressure Diastolic:</strong> {{$profile->blood_pressure_diastolic}} </p>
+                            <p><strong>Height:</strong> {{$profile->height}} </p>
+                            <p><strong>Weight:</strong> {{$profile->weight}} </p>
                             <p><strong>Blood Group:</strong> {{$profile->blood_group}} </p>
                             <p><strong>Job Title :</strong> {{$profile->job_title}} </p>
                             <p><strong>Company Name:</strong> {{$profile->company_name}} </p>
