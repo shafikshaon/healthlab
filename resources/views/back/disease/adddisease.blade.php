@@ -20,7 +20,7 @@
           {{ csrf_field() }}
             <div class="form-group">
                 <label class="col-lg-2 control-label">Disease Name</label>
-                <div class="col-lg-10"><input type="text" name="disease_name" placeholder="Disease Name" class="form-control">
+                <div class="col-lg-10"><input type="text" name="disease_name" placeholder="Disease Name" class="form-control" autofocus>
                   @if($errors->any())
                       <div class="alert-danger">
                       @foreach($errors->all() as $error)

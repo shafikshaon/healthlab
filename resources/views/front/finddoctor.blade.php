@@ -30,13 +30,11 @@
                             <div class="col-md-6 col-md-offset-3">
                               <select data-placeholder="Choose location..." class="chosen-select" style="width:350px;" tabindex="2" name="location">
                                   <option value="">Type location</option>
-                                  @foreach($doctors as $doctor)
                                   <?php
-                                      $doctors_city = App\UserProfile::where('user_id', $doctor->id)->get();
+                                  $doctors_city = App\UserProfile::distinct()->select('city')->where('city', '!=', '')->groupBy('city')->get();
                                   ?>
-                                      @foreach($doctors_city as $city)
-                                          <option value="{{$city->city}}">{{$city->city}}</option>
-                                          @endforeach
+                                  @foreach($doctors_city as $city)
+                                      <option value="{{$city->city}}">{{$city->city}}</option>
                                   @endforeach
                               </select>
                             </div>
@@ -73,14 +71,12 @@
                             <div class="col-md-6 col-md-offset-3">
                               <select data-placeholder="Choose specialist in..." class="chosen-select" style="width:350px;" tabindex="2" name="job_title">
                                   <option value="">Specialist in</option>
-                                  @foreach($doctors as $doctor)
                                   <?php
-                                      $doctors_job_title = App\UserProfile::where('user_id', $doctor->id)->get();
+                                       $doctors_job_title = App\UserProfile::distinct()->select('job_title')->where('job_title', '!=', '')->groupBy('job_title')->get();
                                   ?>
                                       @foreach($doctors_job_title as $job_title)
                                           <option value="{{$job_title->job_title}}">{{$job_title->job_title}}</option>
                                           @endforeach
-                                  @endforeach
                               </select>
                             </div>
                         </div>

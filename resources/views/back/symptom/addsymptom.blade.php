@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
                 <label class="col-lg-2 control-label">Symptom</label>
-                <div class="col-lg-10"><input type="text" name="symptom" placeholder="Symptom" class="form-control">
+                <div class="col-lg-10"><input type="text" name="symptom" placeholder="Symptom" class="form-control" autofocus>
                   @if($errors->any())
                       <div class="alert-danger">
                       @foreach($errors->all() as $error)
