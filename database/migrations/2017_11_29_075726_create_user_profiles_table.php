@@ -27,6 +27,7 @@ class CreateUserProfilesTable extends Migration
           $table->string('building')->nullable();
           $table->string('street')->nullable();
           $table->string('city')->nullable();
+          $table->string('area')->nullable();
           $table->string('post_code')->nullable();
           $table->string('country')->nullable();
           $table->string('job_title')->nullable();

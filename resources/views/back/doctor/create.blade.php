@@ -65,6 +65,11 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-lg-3 control-label">Area</label>
+                <div class="col-lg-9"><input type="text" name="area" placeholder="Area" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-lg-3 control-label">Country</label>
                 <div class="col-lg-9"><input type="text" name="country" placeholder="Country" class="form-control">
                 </div>

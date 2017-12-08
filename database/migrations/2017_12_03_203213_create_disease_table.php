@@ -17,6 +17,7 @@ class CreateDiseaseTable extends Migration
             $table->increments('id');
             $table->string('disease_name');
             $table->integer('organ_id')->unsigned();
+            $table->string('specilist');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });

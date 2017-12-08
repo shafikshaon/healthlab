@@ -20,7 +20,7 @@
           {{ csrf_field() }}
             <div class="form-group">
                 <label class="col-lg-2 control-label">Disease Name</label>
-                <div class="col-lg-10"><input type="text" name="disease_name" placeholder="Disease Name" value="{{$disease->disease_name}}" class="form-control">
+                <div class="col-lg-10"><input type="text" name="disease_name" placeholder="Disease Name" value="{{$diseases->disease_name}}" class="form-control">
                   @if($errors->any())
                       <div class="alert-danger">
                       @foreach($errors->all() as $error)
@@ -30,11 +30,20 @@
                   @endif
                 </div>
             </div>
+            <?php
+              $profiles = App\UserProfile::all();
+            ?>
             <div class="form-group">
-                <div class="col-lg-offset-2 col-lg-10">
-                    <button class="btn btn-sm btn-primary" type="submit">Update Disease</button>
+                <label class="col-sm-2 control-label">Assign Specialist</label>
+                <div class="col-sm-10">
+                  <select class="form-control" name="specilist">
+                    @foreach($profiles as $profile)
+                    <option value="{{$profile->id}}">{{$profile->job_title}}</option>
+                    @endforeach
+                  </select>
                 </div>
             </div>
+
             <?php
               $organs = App\Organ::all();
             ?>
@@ -48,6 +57,13 @@
                   </select>
                 </div>
             </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button class="btn btn-sm btn-primary" type="submit">Update Disease</button>
+                </div>
+            </div>
+
         </form>
     </div>
   </div>

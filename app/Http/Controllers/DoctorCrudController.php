@@ -70,6 +70,7 @@ class DoctorCrudController extends Controller
       $doctors_profile->blood_pressure_diastolic = $request->input('blood_pressure_diastolic');
       $doctors_profile->height = $request->input('height');
       $doctors_profile->weight = $request->input('weight');
+      $doctors_profile->area = $request->input('area');
 
 
 
@@ -135,6 +136,7 @@ class DoctorCrudController extends Controller
             'blood_pressure_systolic'=> $request->input('blood_pressure_systolic'),
             'height'=> $request->input('height'),
             'weight'=> $request->input('weight'),
+            'area'=> $request->input('area'),
 
         );
         User::where('id',$id)->update($data);

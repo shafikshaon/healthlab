@@ -43,6 +43,21 @@
                   </select>
                 </div>
             </div>
+            <?php
+              $profiles = App\UserProfile::select('job_title')
+              ->where('job_title', '!=', ' ')
+              ->groupBy('job_title')->get();
+            ?>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Assign Specialist</label>
+                <div class="col-sm-10">
+                  <select class="form-control" name="specilist">
+                    @foreach($profiles as $profile)
+                    <option value="{{$profile->job_title}}">{{$profile->job_title}} </option>
+                    @endforeach
+                  </select>
+                </div>
+            </div>
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
                     <button class="btn btn-sm btn-primary" type="submit">Add Disease</button>

@@ -13,18 +13,24 @@ class UsersProfileTableSeeder extends Seeder
     {
       $faker = Faker\Factory::create();
 
-      for($i = 0; $i < 21; $i++) {
+      for($i = 0; $i < 56; $i++) {
         App\UserProfile::create([
-            'user_id' => $faker->unique()->numberBetween($min = 1, $max = 21),
+            'user_id' => $faker->unique()->numberBetween($min = 1, $max = 56),
             'img_path' => $faker->image($dir = 'public/profile_img/', $width = 640, $height = 480),
             'phone_number' => $faker->e164PhoneNumber     ,
             'building' => $faker->buildingNumber,
             'street' => $faker->streetName,
-            'city' => $faker->city,
+            'city' => $faker->randomElement($array = array ('Dhaka','Khulna', 'Sylhet')),
             'post_code' => $faker->postcode,
-            'country' => $faker->country,
-            'job_title' => $faker->jobTitle,
-            'company_name' => $faker->company,
+            'country' => "Bangladesh",
+            'job_title' => $faker->randomElement($array = array ('Medicine','Pediatrics', 'Surgery','Obstetrics & Gynaecology', 'Dentistry','Basic & Paraclinical Science', 'Preventive & Social Medicine','Gastroenterology', 'Neurology', 'Nephrology', 'Endocrinology & Metabolism', 'Cardiology', 'Pulmonology', 'Rheumatology', 'Infectious Disease & Tropical Medicine')),
+            'educational_qualification' => $faker->randomElement($array = array ('M.B.B.S','FCPS')),
+            'blood_pressure_systolic' => $faker->numberBetween($min = 100, $max = 140),
+            'blood_pressure_diastolic' => $faker->numberBetween($min = 100, $max = 160),
+            'weight' => $faker->numberBetween($min = 70, $max = 90),
+            'height' => $faker->numberBetween($min = 165, $max = 180),
+            'area' => $faker->city,
+            'blood_group' => $faker->randomElement($array = array ('A+','A-', 'B+','B-', 'AB+','AB-', 'O+','O-')),
         ]);
       }
     }

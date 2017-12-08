@@ -15,36 +15,31 @@
                     You can identify your diseases by providing physical and mental syntrome
                 </p>
                 <form id="form" action="#" class="wizard-big">
-                    <h1>Age</h1>
+                    <h1>Organ</h1>
                     <fieldset>
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
-                                <h2>How old are you?</h2>
+                                <h2>Select Organ</h2>
+                                <?php
+                                    $organs = App\Organ::all();
+                                ?>
                                 <div class="form-group">
-                                    <label>Age *</label>
-                                    <select class="form-control" name="account" required>
-                                        <option>00 - 0.9</option>
-                                        <option>01 - 02</option>
-                                        <option>03 - 04</option>
-                                        <option>05 - 09</option>
-                                        <option>10 - 12</option>
-                                        <option>13 - 19</option>
-                                        <option>20 - 29</option>
-                                        <option>30 - 39</option>
-                                        <option>40 - 49</option>
-                                        <option>50 - 59</option>
-                                        <option>60+</option>
+                                    <label>Organ *</label>
+                                    <select class="form-control" name="organ_id">
+                                      @foreach($organs as $organ)
+                                      <option value="{{$organ->id}}">{{$organ->organ_name}}</option>
+                                      @endforeach
                                     </select>
                                 </div>
                             </div>
                         </div>
 
                     </fieldset>
-                    <h1>Gender</h1>
+                    <h1>Question</h1>
                     <fieldset>
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
-                                <h2>I am</h2>
+                                <h2>Question 01</h2>
                                 <div class="form-group">
                                     <label>Gender *</label>
                                     <select class="form-control" name="account" required>

@@ -130,6 +130,11 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-lg-3 control-label">Area</label>
+                        <div class="col-lg-9"><input type="text" name="area" placeholder="Area" class="form-control" value="<?php  echo $profile->area; ?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-lg-2 control-label">City</label>
                         <div class="col-lg-10"><input type="text" name="city" value="<?php  echo $profile->city; ?>" placeholder="City" class="form-control">
                         </div>
@@ -165,4 +170,3 @@
         </div>
     </div>
 @endsection
-

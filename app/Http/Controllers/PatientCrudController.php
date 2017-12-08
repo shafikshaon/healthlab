@@ -62,6 +62,7 @@ class PatientCrudController extends Controller
             'blood_pressure_systolic'=> $request->input('blood_pressure_systolic'),
             'height'=> $request->input('height'),
             'weight'=> $request->input('weight'),
+            'area'=> $request->input('area'),
 
 
 
@@ -140,6 +141,7 @@ class PatientCrudController extends Controller
         $patients_profile->blood_pressure_diastolic = $request->input('blood_pressure_diastolic');
         $patients_profile->height = $request->input('height');
         $patients_profile->weight = $request->input('weight');
+        $patients_profile->area = $request->input('area');
 
 
         $file_name = time().$_FILES['image']['name'];
@@ -157,5 +159,3 @@ class PatientCrudController extends Controller
     }
 
 }
-
-
