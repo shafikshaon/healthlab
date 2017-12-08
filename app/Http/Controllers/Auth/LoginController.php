@@ -45,10 +45,10 @@ class LoginController extends Controller
             return redirect()->route('dashboard');
         }
         if ( $user->account_type == 'Patient' ) {// do your margic here
-            return redirect()->route('/');
+            return redirect()->route('patientprofile');
         }
         if ( $user->account_type == 'Doctor' ) {// do your margic here
-            return redirect()->route('/');
+            return redirect()->route('doctorprofile');
         }
 
          return redirect('/');

@@ -138,7 +138,7 @@ Route::prefix('admin/symptom')->group(function () {
   Route::get('delete/{id}', ['as' =>'deletesymptom', 'uses' => 'SymptomsCrudController@getDeleteSymptom']);
 });
 
-//Symptoms
+//Question
 Route::prefix('admin/question')->group(function () {
     Route::get('viewall', ['as' =>'viewallsymptom', 'uses' => 'QuestionCrudController@getAllSymptom']);
     Route::get('add', ['as' =>'addquestion', 'uses' => 'QuestionCrudController@getAddQuestion']);
@@ -147,6 +147,18 @@ Route::prefix('admin/question')->group(function () {
     Route::post('update/{id}', ['as' =>'updatesymptom', 'uses' => 'QuestionCrudController@postUpdateSymptom']);
     Route::get('delete/{id}', ['as' =>'deletesymptom', 'uses' => 'QuestionCrudController@getDeleteSymptom']);
 });
+
+//Doctor Profile
+Route::prefix('doctor')->group(function () {
+    Route::get('dashboard', ['as' =>'doctorprofile', 'uses' => 'DoctorProfileController@getDoctorProfile']);
+});
+
+//Patient Profile
+Route::prefix('patient')->group(function () {
+    Route::get('dashboard', ['as' =>'patientprofile', 'uses' => 'PatientProfileController@getPatientProfile']);
+});
+
+
 
 Auth::routes();
 
