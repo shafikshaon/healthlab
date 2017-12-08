@@ -99,6 +99,17 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Question</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{route('addquestion')}}">Add An Question</a>
+                    </li>
+                    <li>
+                        <a href="">View All Question</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
 
     </div>
