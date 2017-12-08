@@ -13,3 +13,5 @@
 <link href="{{asset('front/css/plugins/steps/jquery.steps.css')}}" rel="stylesheet">
 <!-- chosen select -->
 <link href="{{asset('front/css/plugins/chosen/chosen.css')}}" rel="stylesheet">
+<!-- morris -->
+<link href="{{asset('front/css/plugins/morris/morris-0.4.3.min.css')}}" rel="stylesheet">

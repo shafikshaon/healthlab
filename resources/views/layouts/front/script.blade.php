@@ -21,6 +21,9 @@
 <script src="{{asset('front/js/plugins/validate/jquery.validate.min.js')}}"></script>
 <!-- chosen select -->
 <script src="{{asset('front/js/plugins/chosen/chosen.jquery.js')}}"></script>
+<!-- ChartJS-->
+<script src="{{asset('js/plugins/chartJs/Chart.min.js')}}"></script>
+<script src="{{asset('js/demo/chartjs-demo.js')}}"></script>
 <script>
 
     $(document).ready(function () {

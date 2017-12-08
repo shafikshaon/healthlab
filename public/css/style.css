@@ -8551,32 +8551,3 @@ body.md-skin {
     margin: 0;
   }
 }
-
-.diagnosisscreen {
-  padding-top: 60px;
-}
-.wizard-big.wizard > .content {
-    min-height: 200px;
-}
-.wizard-card .picture:hover{
-    border-color: #2ca8ff;
-}
-.wizard-card .picture input[type="file"] {
-    cursor: pointer;
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: 0 !important;
-    position: absolute;
-    top: 0;
-    width: auto;
-}
-
-.wizard-card .picture-src{
-    width: 100%;
-
-}
-#output_image
-{
- max-width:300px;
-}

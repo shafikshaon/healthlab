@@ -1,26 +1,39 @@
 <!-- Mainly scripts -->
-<script src="{{asset('front/js/jquery-3.1.1.min.js')}}"></script>
-<script src="{{asset('front/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/jquery-3.1.1.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('front/js/plugins/metisMenu/jquery.metisMenu.js')}}"></script>
 <script src="{{asset('front/js/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
 
+<!-- Morris -->
+<script src="{{asset('js/plugins/morris/raphael-2.1.0.min.js')}}"></script>
+<script src="{{asset('js/plugins/morris/morris.js')}}"></script>
+
 <!-- Custom and plugin javascript -->
-<script src="{{asset('front/js/inspinia.js')}}"></script>
-<script src="{{asset('front/js/plugins/pace/pace.min.js')}}"></script>
-<script src="{{asset('front/js/plugins/wow/wow.min.js')}}"></script>
+<script src="{{asset('js/inspinia.js')}}"></script>
+<script src="{{asset('js/plugins/pace/pace.min.js')}}"></script>
+<script src="{{asset('js/plugins/wow/wow.min.js')}}"></script>
 
 <!-- iCheck -->
-<script src="{{asset('front/js/plugins/iCheck/icheck.min.js')}}"></script>
+<script src="{{asset('js/plugins/iCheck/icheck.min.js')}}"></script>
 
 <!-- Data picker -->
-<script src="{{asset('front/js/plugins/datapicker/bootstrap-datepicker.js')}}"></script>
+<script src="{{asset('js/plugins/datapicker/bootstrap-datepicker.js')}}"></script>
 
 <!-- steps -->
-<script src="{{asset('front/js/plugins/steps/jquery.steps.min.js')}}"></script>
+<script src="{{asset('js/plugins/steps/jquery.steps.min.js')}}"></script>
 <!-- validate -->
-<script src="{{asset('front/js/plugins/validate/jquery.validate.min.js')}}"></script>
+<script src="{{asset('js/plugins/validate/jquery.validate.min.js')}}"></script>
 <!-- chosen select -->
-<script src="{{asset('front/js/plugins/chosen/chosen.jquery.js')}}"></script>
+<script src="{{asset('js/plugins/chosen/chosen.jquery.js')}}"></script>
+
+<!-- ChartJS-->
+<script src="{{asset('js/plugins/chartJs/Chart.min.js')}}"></script>
+<script src="{{asset('js/demo/chartjs-demo.js')}}"></script>
+
+<!-- Morris demo data-->
+<script src="{{asset('js/demo/morris-demo.js')}}"></script>
+
+
 <script>
 
     $(document).ready(function () {
