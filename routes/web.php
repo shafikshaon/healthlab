@@ -142,7 +142,7 @@ Route::prefix('admin/symptom')->group(function () {
 Route::prefix('admin/question')->group(function () {
     Route::get('viewall', ['as' =>'viewallsymptom', 'uses' => 'QuestionCrudController@getAllSymptom']);
     Route::get('add', ['as' =>'addquestion', 'uses' => 'QuestionCrudController@getAddQuestion']);
-    Route::post('insert', ['as' =>'insertsymptom', 'uses' => 'QuestionCrudController@postAddSymptom']);
+    Route::post('insert', ['as' =>'insertquestion', 'uses' => 'QuestionCrudController@postAddQuestion']);
     Route::get('edit/{id}', ['as' =>'editsymptom', 'uses' => 'QuestionCrudController@getEditSymptom']);
     Route::post('update/{id}', ['as' =>'updatesymptom', 'uses' => 'QuestionCrudController@postUpdateSymptom']);
     Route::get('delete/{id}', ['as' =>'deletesymptom', 'uses' => 'QuestionCrudController@getDeleteSymptom']);

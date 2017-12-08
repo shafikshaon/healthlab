@@ -26,29 +26,32 @@
                 <form class="form-horizontal" action="{{route('insertquestion')}}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Question</label>
-                        <div class="col-sm-10"><input type="text" name="question" class="form-control"> <span class="help-block m-b-none">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                        <label class="col-lg-3 control-label">Question</label>
+                        <div class="col-lg-9">
+                            <input type="text" name="question" class="form-control">
                         </div>
                     </div>
+                    <?php
+                    $organs  = App\Organ::all();
+                    ?>
                     <div class="form-group">
-                        <label class="col-lg-3 control-label">Organ</label>
-                        <div class="col-lg-9">
-                            <select class="form-control" name="gender">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
+                        <label class="col-lg-3 control-label">Organ *</label>
+                        <select class="form-control" name="organ_name">
+                            @foreach($organs as $organ)
+                                <option value="{{$organ->organ_name}}">{{$organ->organ_name}}</option>
+                            @endforeach
+                        </select>
                     </div>
+                    <?php
+                    $diseases  = App\Disease::all();
+                    ?>
                     <div class="form-group">
-                        <label class="col-lg-3 control-label">disease </label>
-                        <div class="col-lg-9">
-                            <select class="form-control" name="gender">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
+                        <label class="col-lg-3 control-label">Disease *</label>
+                        <select class="form-control" name="disease_name">
+                            @foreach($diseases as $disease)
+                                <option value="{{$disease->disease_name}}">{{$disease->disease_name}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <div class="col-lg-offset-3 col-lg-9">
