@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('front.index');
 });
 
-//Login, Register
-Route::get('login', ['as' =>'login', 'uses' => 'AccountController@getMyLogin']);
-Route::get('register', ['as' =>'register', 'uses' => 'AccountController@getMyRegister']);
-Route::post('register', ['as' =>'registernewuser', 'uses' => 'AccountController@insertUser']);
-Route::post('login', ['as' =>'login', 'uses' => 'AccountController@postMyLogin']);
-Route::get('logout', ['as' =>'logout', 'uses' => 'AccountController@getLogout']);
+// //Login, Register
+// Route::get('login', ['as' =>'login', 'uses' => 'AccountController@getMyLogin']);
+// Route::get('register', ['as' =>'register', 'uses' => 'AccountController@getMyRegister']);
+// Route::post('register', ['as' =>'registernewuser', 'uses' => 'AccountController@insertUser']);
+// Route::post('login', ['as' =>'login', 'uses' => 'AccountController@postMyLogin']);
+// Route::get('logout', ['as' =>'logout', 'uses' => 'AccountController@getLogout']);
 
 
 
@@ -137,3 +137,14 @@ Route::prefix('admin/symptom')->group(function () {
   Route::post('update/{id}', ['as' =>'updatesymptom', 'uses' => 'SymptomsCrudController@postUpdateSymptom']);
   Route::get('delete/{id}', ['as' =>'deletesymptom', 'uses' => 'SymptomsCrudController@getDeleteSymptom']);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');;
+$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+$this->post('login', 'Auth\LoginController@login');
+$this->post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Registration Routes...
+$this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+$this->post('register', 'Auth\RegisterController@register');

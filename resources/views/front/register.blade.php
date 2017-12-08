@@ -29,7 +29,7 @@
           </div>
         @endif
 
-        <form class="m-t" role="form" action="{{route('registernewuser')}}" method="post">
+        <form class="m-t" role="form" action="{{ route('register') }}" method="post">
           {{ csrf_field() }}
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="First Name" name="fname">

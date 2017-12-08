@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\UserProfile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Requests;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -27,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -48,9 +51,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'fname' => 'required|string',
+            'lname' => 'required|string',
+            'uname' => 'required|string',
+            'email' => 'required|email|string|unique:users',
+            'password' => 'required|string|min:6',
+            'gender' => 'required|string',
+            'dob' => 'required|string',
+            'account_type' => 'required|string',
         ]);
     }
 
@@ -62,10 +70,28 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+        $user = User::create([
+            'fname' => $data['fname'],
+            'lname' => $data['lname'],
+            'uname' => $data['uname'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => \Hash::make($data['password']),
+            'gender' => $data['gender'],
+            'dob' => $data['dob'],
+            'account_type' => $data['account_type'],
         ]);
+        $profile = UserProfile::create([
+            'user_id' => $user->id,
+        ]);
+
+        // $profile->users()->sync([$user->id]);
+
+        return $user;
     }
+
+    protected function redirectTo()
+    {
+        return '/';
+    }
+
 }

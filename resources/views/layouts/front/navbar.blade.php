@@ -17,7 +17,19 @@
                     <li><a class="page-scroll" href="#team">Team</a></li>
                     <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
                     <li><a class="page-scroll" href="#contact">Contact</a></li>
-                    <li><a class="page-scroll login" href="{{route('login')}}">Login</a></li>
+                    @if(Auth::check())
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                    @else
+                        <li><a class="page-scroll login" href="{{route('login')}}">Login</a></li>
+                    @endif
                 </ul>
             </div>
         </div>

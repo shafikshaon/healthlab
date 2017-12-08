@@ -76,7 +76,7 @@
                                   ?>
                                       @foreach($doctors_job_title as $job_title)
                                           <option value="{{$job_title->job_title}}">{{$job_title->job_title}}</option>
-                                          @endforeach
+                                      @endforeach
                               </select>
                             </div>
                         </div>
