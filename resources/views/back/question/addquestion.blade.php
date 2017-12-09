@@ -36,22 +36,26 @@
                     ?>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Organ *</label>
-                        <select class="form-control" name="organ_name">
-                            @foreach($organs as $organ)
-                                <option value="{{$organ->organ_name}}">{{$organ->organ_name}}</option>
-                            @endforeach
-                        </select>
+                        <div class="col-lg-9">
+                            <select class="form-control" name="organ_name">
+                                @foreach($organs as $organ)
+                                    <option value="{{$organ->organ_name}}">{{$organ->organ_name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                     <?php
                     $diseases  = App\Disease::all();
                     ?>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Disease *</label>
-                        <select class="form-control" name="disease_name">
-                            @foreach($diseases as $disease)
-                                <option value="{{$disease->disease_name}}">{{$disease->disease_name}}</option>
-                            @endforeach
-                        </select>
+                        <div class="col-lg-9">
+                            <select class="form-control" name="disease_name">
+                                @foreach($diseases as $disease)
+                                    <option value="{{$disease->disease_name}}">{{$disease->disease_name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
                         <div class="col-lg-offset-3 col-lg-9">

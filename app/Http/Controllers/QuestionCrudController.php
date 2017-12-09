@@ -9,7 +9,7 @@ class QuestionCrudController extends Controller
 
     public function getAddQuestion()
     {
-        return view('back.disease.addquestion');
+        return view('back.question.addquestion');
     }
 
     public function postAddQuestion(Request $request)
@@ -19,7 +19,6 @@ class QuestionCrudController extends Controller
             'question' => 'required',
             'organ_name' => 'required',
             'disease_name' => 'required',
-
         ]);
     }
 
