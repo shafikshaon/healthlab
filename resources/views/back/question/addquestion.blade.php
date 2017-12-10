@@ -1,6 +1,5 @@
 @extends('layouts.back.master')
 @section('title', 'Add Doctor')
-
 @section('content')
     <div class="wrapper wrapper-content">
         @if(Session::has('success'))
@@ -37,7 +36,7 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Organ *</label>
                         <div class="col-lg-9">
-                            <select class="form-control" name="organ_name">
+                            <select class="form-control" name="organ_id">
                                 @foreach($organs as $organ)
                                     <option value="{{$organ->id}}">{{$organ->organ_name}}</option>
                                 @endforeach
@@ -50,7 +49,7 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Disease *</label>
                         <div class="col-lg-9">
-                            <select class="form-control" name="disease_name">
+                            <select class="form-control" name="disease_id">
                                 @foreach($diseases as $disease)
                                     <option value="{{$disease->id}}">{{$disease->disease_name}}</option>
                                 @endforeach
