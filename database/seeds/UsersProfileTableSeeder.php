@@ -13,9 +13,9 @@ class UsersProfileTableSeeder extends Seeder
     {
       $faker = Faker\Factory::create();
 
-      for($i = 0; $i < 106; $i++) {
+      for($i = 0; $i < 100; $i++) {
         App\UserProfile::create([
-            'user_id' => $faker->unique()->numberBetween($min = 1, $max = 106),
+            'user_id' => $faker->unique()->numberBetween($min = 1, $max = 100),
             'img_path' => $faker->image($dir = 'public/profile_img/', $width = 640, $height = 480),
             'phone_number' => $faker->e164PhoneNumber     ,
             'building' => $faker->buildingNumber,
@@ -30,7 +30,7 @@ class UsersProfileTableSeeder extends Seeder
             'weight' => $faker->numberBetween($min = 70, $max = 90),
             'height' => $faker->numberBetween($min = 155, $max = 190),
             'area' => $faker->city,
-            'compnay_name' => $faker->company,
+            'company_name' => $faker->company,
             'blood_group' => $faker->randomElement($array = array ('A+','A-', 'B+','B-', 'AB+','AB-', 'O+','O-')),
         ]);
       }

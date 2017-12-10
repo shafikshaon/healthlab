@@ -49,6 +49,7 @@ class AdminDeveloperSeeder extends Seeder
             ]
         ]);
 
+
         DB::table('users')->insert([
           [
             'fname' => 'Shafik',
@@ -84,5 +85,11 @@ class AdminDeveloperSeeder extends Seeder
             'remember_token' => bcrypt(str_random(100)),
           ]
         ]);
+
+        for($i = 0; $i < 6; $i++) {
+          App\UserProfile::create([
+              'user_id' => $faker->unique()->numberBetween($min = 101, $max = 106),
+          ]);
+        }
     }
 }
