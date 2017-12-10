@@ -13,13 +13,13 @@ class UsersTableSeeder extends Seeder
     {
       $faker = Faker\Factory::create();
 
-      for($i = 0; $i < 50; $i++) {
+      for($i = 0; $i < 100; $i++) {
         App\User::create([
             'fname' => $faker->firstName,
             'lname' => $faker->lastName,
             'uname' => $faker->userName,
             'email' => $faker->freeEmail,
-            'gender' => $faker->randomElement($array = array ('Male','Female','Others')),
+            'gender' => $faker->randomElement($array = array ('Male','Female')),
             'dob' => $faker->date($format = 'Y-m-d', $max = 'now'),
             'account_type' => $faker->randomElement($array = array ('Patient','Doctor')),
             'password' => bcrypt('123456'),

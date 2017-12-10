@@ -39,7 +39,7 @@
                         <div class="col-lg-9">
                             <select class="form-control" name="organ_name">
                                 @foreach($organs as $organ)
-                                    <option value="{{$organ->organ_name}}">{{$organ->organ_name}}</option>
+                                    <option value="{{$organ->id}}">{{$organ->organ_name}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -52,7 +52,7 @@
                         <div class="col-lg-9">
                             <select class="form-control" name="disease_name">
                                 @foreach($diseases as $disease)
-                                    <option value="{{$disease->disease_name}}">{{$disease->disease_name}}</option>
+                                    <option value="{{$disease->id}}">{{$disease->disease_name}}</option>
                                 @endforeach
                             </select>
                         </div>

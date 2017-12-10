@@ -15,8 +15,8 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('organ_name');
-            $table->string('disease_name');
+            $table->integer('organ_id')->unsigned();
+            $table->integer('disease_id')->unsigned();
             $table->string('question');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
