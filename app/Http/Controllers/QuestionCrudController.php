@@ -30,7 +30,7 @@ class QuestionCrudController extends Controller
 
         $question->save();
 
-        return redirect()->route('viewallquestion');
+        return back()->withInput();
 
     }
 

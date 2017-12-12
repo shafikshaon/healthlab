@@ -22,7 +22,19 @@
                     <li><a class="page-scroll" href="#team">Team</a></li>
                     <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
                     <li><a class="page-scroll" href="#contact">Contact</a></li>
-                    <li><a class="page-scroll login" href="{{route('login')}}">Login</a></li>
+                    @if(Auth::check())
+                    <li><a class="login" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        <span class="btn-success btn-sm">{{Auth::user()->uname}}</span>
+                    </a></li>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                    @else
+                        <li><a class="page-scroll login" href="{{route('login')}}">Login</a></li>
+                    @endif
                 </ul>
             </div>
         </div>

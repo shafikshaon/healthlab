@@ -20,6 +20,8 @@ class AddSymptomTable extends Migration
           $table->timestamp('created_at')->useCurrent();
           $table->timestamp('updated_at')->useCurrent();
       });
+
+      DB::statement('ALTER TABLE symptoms ADD FULLTEXT full(symptom)');
     }
 
     /**

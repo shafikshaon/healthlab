@@ -10,4 +10,14 @@ class DiagnosisController extends Controller
   {
     return view('front.diagnosis');
   }
+  public function postDiagnosisSymptom(Request $request)
+  {
+      $question->disease_id = $request->input('organ_id');
+      $question->disease_id = $request->input('disease_id');
+      $question->disease_id = $request->input('disease_id');
+      $question->disease_id = $request->input('disease_id');
+      $question->disease_id = $request->input('disease_id');
+      $question->disease_id = $request->input('disease_id');
+      $question->disease_id = $request->input('disease_id');
+  }
 }
