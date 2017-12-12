@@ -54,7 +54,7 @@
                         <h1>Diagnosis Disease</h1>
                         <p>Determining potential disease through physical and mental symptoms</p>
                         <p>
-                            <a class="btn btn-lg btn-primary" href="{{route('diagnosis')}}" role="button">Diagnosis</a>
+                            <a class="btn btn-lg btn-primary" href="{{route('organdiagnosis')}}" role="button">Diagnosis</a>
                         </p>
                     </div>
                     <!-- <div class="carousel-image wow zoomIn">

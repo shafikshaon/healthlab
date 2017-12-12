@@ -68,6 +68,7 @@ Route::get('single_profile/{id}', ['as' =>'single_profile', 'uses' => 'ProfileCo
 
 Route::get('diagnosis', ['as' =>'diagnosis', 'uses' => 'DiagnosisController@getMyDiagnosis']);
 Route::post('diagnosissubmit', ['as' =>'insertdiagnosissymptom', 'uses' => 'DiagnosisController@postDiagnosisSymptom']);
+Route::post('diagnosis', ['as' =>'organdiagnosis', 'uses' => 'DiagnosisController@postDiagnosisOrgan']);
 
 Route::get('finddoctor', ['as' =>'finddoctor', 'uses' => 'DoctorController@getDoctorSearch']);
 Route::get('search', ['as' =>'finddoctorsearch', 'uses' => 'DoctorController@getDoctorSearchResult']);
