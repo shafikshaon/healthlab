@@ -30,6 +30,12 @@
                             <input type="text" name="question" class="form-control">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Keyword</label>
+                        <div class="col-lg-9">
+                            <input type="text" name="keyword" class="form-control">
+                        </div>
+                    </div>
                     <?php
                     $organs  = App\Organ::all();
                     ?>

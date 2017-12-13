@@ -21,12 +21,14 @@ class QuestionCrudController extends Controller
             'question' => 'required',
             'organ_id' => 'required',
             'disease_id' => 'required',
+            'keyword' => 'required',
         ]);
         $question = new Question;
 
         $question->disease_id = $request->input('disease_id');
         $question->organ_id = $request->input('organ_id');
         $question->question = $request->input('question');
+        $question->keyword = $request->input('keyword');
 
         $question->save();
 

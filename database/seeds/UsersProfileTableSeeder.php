@@ -13,10 +13,10 @@ class UsersProfileTableSeeder extends Seeder
     {
       $faker = Faker\Factory::create();
 
-      for($i = 0; $i < 100; $i++) {
+      for($i = 0; $i < 500; $i++) {
         App\UserProfile::create([
-            'user_id' => $faker->unique()->numberBetween($min = 1, $max = 100),
-            'img_path' => $faker->image($dir = 'public/profile_img/', $width = 640, $height = 480),
+            'user_id' => $faker->unique()->numberBetween($min = 1, $max = 500),
+            'img_path' => "profile.jpg",
             'phone_number' => $faker->e164PhoneNumber     ,
             'building' => $faker->buildingNumber,
             'street' => $faker->streetName,

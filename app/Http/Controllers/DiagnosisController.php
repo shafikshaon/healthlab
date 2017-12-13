@@ -21,12 +21,16 @@ class DiagnosisController extends Controller
       $ques1 = $request->input('ques1');
       $ques2 = $request->input('ques2');
       $ques3 = $request->input('ques3');
+      $ques4 = $request->input('ques4');
+      $ques5 = $request->input('ques5');
+      $ques6 = $request->input('ques6');
+      $ques7 = $request->input('ques7');
 
       // dd($organ_id,$ques1, $ques2, $ques3 );
       // $result = \DB::raw("SELECT * FROM symptoms WHERE MATCH(symptom) AGAINST('$ques1 $ques2 $ques3' IN NATURAL LANGUAGE MODE)");
 
 
-      $result = \DB::select(DB::raw("SELECT id, disease_id, MATCH(symptom) AGAINST('weakness no  exhaustion' IN BOOLEAN MODE) AS Score FROM symptoms WHERE MATCH(symptom) AGAINST ('weakness no  exhaustion' IN BOOLEAN MODE)"));
+      $result = \DB::select(DB::raw("SELECT id, disease_id, MATCH(symptom) AGAINST('$ques1 $ques2 $ques3 $ques4 $ques5 $ques6 $ques7' IN BOOLEAN MODE) AS Score FROM symptoms WHERE MATCH(symptom) AGAINST ('$ques1 $ques2 $ques3 $ques4 $ques5 $ques6 $ques7' IN BOOLEAN MODE)"));
 
       return view('front.diagnosisresult', ['result' => $result]);
 

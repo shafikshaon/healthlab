@@ -18,6 +18,7 @@ class CreateQuestionsTable extends Migration
             $table->integer('organ_id')->unsigned();
             $table->integer('disease_id')->unsigned();
             $table->string('question');
+            $table->string('keyword');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });

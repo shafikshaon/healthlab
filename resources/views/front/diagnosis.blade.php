@@ -18,7 +18,7 @@
                     {{ csrf_field() }}
 
                     <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
+                        <div class="col-md-12">
                             <h2>Question</h2>
                             <div class="form-group">
                                 <?php
@@ -30,7 +30,7 @@
                                 <label for="">{{$question->question}}</label>
                                 <div class="col-sm-10">
                                     <div class="i-checks">
-                                        <label> <input type="radio" value="weakness" name="<?php echo "ques".++$i; ?>"> <i></i> Yes</label>
+                                        <label> <input type="radio" value="{{$question->keyword}}" name="<?php echo "ques".++$i; ?>"> <i></i> Yes</label>
                                     </div>
 
                                     <div class="i-checks">
@@ -41,8 +41,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-lg-offset-2 col-lg-10">
+                    <div class="form-group" style="margin-top: 20px;">
+                        <div class="col-lg-10">
                             <button class="btn btn-sm btn-primary" type="submit">Diagnosis</button>
                         </div>
                     </div>
